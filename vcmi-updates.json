@@ -1,0 +1,14 @@
+{
+	"updateType" : "minor",
+	"version" : "VCMI 0.99 92dc902748372fa1743ff24d4597b0b7b4c5c380",
+	"downloadLinks" : 
+	{
+		"macos" : "https://builds.vcmi.download/branch/develop/macOS/",
+		"windows" : "https://builds.vcmi.download/branch/develop/Windows/",
+		"android" : "https://builds.vcmi.download/branch/develop/Android/",
+		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
+		"ios" : "https://vcmi.eu",
+		"other" : "https://vcmi.eu"
+	},
+	"changeLog" : "VCMI 0.99 Daily builds"
+}
