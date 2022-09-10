@@ -1,6 +1,6 @@
 {
 	"updateType" : "minor",
-	"version" : "VCMI 0.99 5862c192b0c0c3cb2a42bfd25482b587693ccc4b",
+	"version" : "VCMI 0.99 205bb0988086d03c96c5951b88362d6364207e7e",
 	"downloadLinks" : 
 	{
 		"macos" : "https://builds.vcmi.download/branch/develop/macOS/",
@@ -11,7 +11,7 @@
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-	"VCMI 0.99 Daily builds",
+	"VCMI 0.99 Daily builds\Several bugs have been fixed in Launcher.",
 	"history" : 
-	[]
+	["VCMI 0.99 5862c192b0c0c3cb2a42bfd25482b587693ccc4b"]
 }
