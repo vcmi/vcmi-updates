@@ -1,17 +1,22 @@
 {
-	"updateType" : "minor",
-	"version" : "VCMI 0.99 205bb0988086d03c96c5951b88362d6364207e7e",
+	"updateType" : "major",
+	"version" : "VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
 	"downloadLinks" : 
 	{
-		"macos" : "https://builds.vcmi.download/branch/develop/macOS/",
-		"windows" : "https://builds.vcmi.download/branch/develop/Windows/",
-		"android" : "https://builds.vcmi.download/branch/develop/Android/",
+		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.0.0",
+		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.0.0",
+		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.0.0",
 		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
 		"ios" : "https://vcmi.eu",
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-	"VCMI 0.99 Daily builds\nSeveral bugs have been fixed in Launcher.",
+	"VCMI 1.0.0 was finally released!\nDetails and changelog you can find on the download page and on our official website.",
 	"history" : 
-	["VCMI 0.99 5862c192b0c0c3cb2a42bfd25482b587693ccc4b"]
+	[
+		"VCMI 0.99 5862c192b0c0c3cb2a42bfd25482b587693ccc4b",
+		"VCMI 0.99 205bb0988086d03c96c5951b88362d6364207e7e",
+		"VCMI 1.0.0.bccc658e8bb311c986f967bd8922456851a0f39e",
+		"VCMI 1.0.0.e6e7679a2c95d17992f1d904058b229b9174493b"
+	]
 }
