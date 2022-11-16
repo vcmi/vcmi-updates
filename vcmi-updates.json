@@ -11,7 +11,7 @@
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-	"BETA VERSION\nThanks for participating in our beta test.\nWe are waiting for feedback in our GitHub, forum or Slack\nKeep you build updated to get latest fixes",
+	"BETA VERSION\nThank you for participating in our beta test.\You can leave feedback on our GitHub Issues, forum or Slack\nPlease install suggested VCMI, it has important changes.",
 	"history" : 
 	[
 		"VCMI 1.1.0.c9e8ae7583863d5272c14ca5bcc5a77cd3170fcf",
