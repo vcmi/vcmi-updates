@@ -1,6 +1,6 @@
 {
 	"updateType" : "minor",
-	"version" : "VCMI 1.1.0.e0aa26e599bc77bd17e0e4efb49c55c311169f3b",
+	"version" : "VCMI 1.1.0.6ab8fccc603b838d51b7b2df3a7bb84377b2b91d",
 	"downloadLinks" : 
 	{
 		"macos" : "https://builds.vcmi.download/branch/online/macOS",
@@ -14,6 +14,8 @@
 	"BETA VERSION\nThank you for participating in our beta test.\nYou can leave feedback on our GitHub Issues, forum or Slack\nPlease install suggested VCMI, it has important changes.",
 	"history" : 
 	[
+		"VCMI 1.1.0.ddebf856655042a93a999d3176bad67e3fbb9629",
+		"VCMI 1.1.0.e0aa26e599bc77bd17e0e4efb49c55c311169f3b",
 		"VCMI 1.1.0.c9e8ae7583863d5272c14ca5bcc5a77cd3170fcf",
 		"VCMI 1.1.0.a7cc8db48540914ca3b16f155e9b8ce8aa3ef29a"
 	]
