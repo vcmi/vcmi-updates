@@ -1,22 +1,36 @@
 {
 	"updateType" : "minor",
-	"version" : "VCMI 1.1.0.6ab8fccc603b838d51b7b2df3a7bb84377b2b91d",
+	"version" : "VCMI 1.1.0.3cd8da6a8becf3643c1d233b2b87ded9f6f5ac53",
 	"downloadLinks" : 
 	{
-		"macos" : "https://builds.vcmi.download/branch/online/macOS",
-		"windows" : "https://builds.vcmi.download/branch/online/Windows/",
+		"macos" : "https://builds.vcmi.download/branch/beta/macOS",
+		"windows" : "https://builds.vcmi.download/branch/beta/Windows/",
 		"android" : "https://vcmi.eu",
 		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
-		"ios" : "https://builds.vcmi.download/branch/online/iOS/",
+		"ios" : "https://builds.vcmi.download/branch/beta/iOS/",
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-	"BETA VERSION\nThank you for participating in our beta test.\nYou can leave feedback on our GitHub Issues, forum or Slack\nPlease install suggested VCMI, it has important changes.",
+	"BETA VERSION\nThank you for participating in our beta test.\nYou can leave feedback on our GitHub Issues, forum or Slack",
 	"history" : 
 	[
 		"VCMI 1.1.0.ddebf856655042a93a999d3176bad67e3fbb9629",
 		"VCMI 1.1.0.e0aa26e599bc77bd17e0e4efb49c55c311169f3b",
 		"VCMI 1.1.0.c9e8ae7583863d5272c14ca5bcc5a77cd3170fcf",
-		"VCMI 1.1.0.a7cc8db48540914ca3b16f155e9b8ce8aa3ef29a"
+		"VCMI 1.1.0.a7cc8db48540914ca3b16f155e9b8ce8aa3ef29a",
+		"VCMI 1.1.0.6ab8fccc603b838d51b7b2df3a7bb84377b2b91d",
+		"VCMI 1.1.0.52375468e4eab64a19f71e41deca192b8b206fce",
+		"VCMI 1.1.0.665d6ebb7804d23e68aaf2713472856a09a7ba85",
+		"VCMI 1.1.0.b9ef95be3e89c854761f033cf951229ebb1c187e",
+		"VCMI 1.1.0.98d59eb2219511ad8c6c70f565abe60cff32ad53",
+
+		"VCMI 1.1.0.89f0cc66e894325ffed002975ec86634d233a27b",
+		"VCMI 1.1.0.fb1a6b734f3f9c192c4b493ce95200f2966de14c",
+		"VCMI 1.1.0.cb1ef1490cd67c0abef9a7fa54f68b211e3753a1",
+		"VCMI 1.1.0.34cd856f535ac0676ae82c359d52a13eb9d1ef65",
+		"VCMI 1.1.0.35e8b794cdc702cecd1c93697e9c0f0eb5054477",
+		"VCMI 1.1.0.3a30d8fb13f5b48561c3289d297f6b858eda7609",
+		"VCMI 1.1.0.47b7c618a98f74e01b5deed3af47333265337065",
+		"VCMI 1.1.0.162b3017ce0d46c085812bc17d25e0a29a052032"
 	]
 }
