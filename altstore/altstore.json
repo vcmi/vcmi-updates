@@ -9,13 +9,13 @@
       "developerName": "VCMI Team",
       "subtitle": "Heroes of Might & Magic III engine",
       "version": "1.1.0",
-      "versionDate": "2022-12-29T11:21:00+02:00", //TBD
+      "versionDate": "2022-12-23T12:00:00+04:00",
       "versionDescription": "VCMI was ported on iOS",
-      "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.1.0/VCMI-1.1.0-cedc9a9-ios.ipa", //TBD
+      "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.1.0/VCMI-1.1.0-5278271-iOS.ipa",
       "localizedDescription": "VCMI is a open source cross-platform HoMM3 engine written from scratch. \n\nYou need data copied from original game to play. \nFollow instructions from https://wiki.vcmi.eu/Installation_on_iOS",
       "iconURL": "https://github.com/vcmi/vcmi/raw/develop/client/icons/vcmiclient.512x512.png",
       "tintColor": "CD8526",
-      "size": 0, //TBD
+      "size": 25501741,
       "screenshotURLs": [
         "https://raw.githubusercontent.com/vcmi/vcmi-updates/master/altstore/screenshots/screenshot1.png",
         "https://raw.githubusercontent.com/vcmi/vcmi-updates/master/altstore/screenshots/screenshot2.png",
