@@ -1,20 +1,21 @@
 {
-	"updateType" : "major",
-	"version" : "VCMI 1.1.0",
+	"updateType" : "minor",
+	"version" : "VCMI 1.1.1",
 	"downloadLinks" : 
 	{
-		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.1.0",
-		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.1.0",
-		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.1.0",
+		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.1.1",
+		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.1.1",
+		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.1.1",
 		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
-		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.1.0",
+		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.1.1",
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-	"VCMI 1.1.0 was released!\niOS support, multiplayer, map editor and more\nRead more on our official website and on the downloads page.",
+	"VCMI 1.1.1 was released!\nMultiple fixes for issues found in 1.1 release.\nRead more on the downloads page.",
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
-		"VCMI 1.1.0.3cd8da6a8becf3643c1d233b2b87ded9f6f5ac53"
+		"VCMI 1.1.0.3cd8da6a8becf3643c1d233b2b87ded9f6f5ac53",
+		"VCMI 1.1.1.b429f0bfeb230de65c771e0edf6e1684a5eb653c"
 	]
 }
