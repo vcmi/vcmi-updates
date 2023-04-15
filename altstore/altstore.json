@@ -10,18 +10,18 @@
       "subtitle": "Heroes of Might & Magic III engine",
       "versions": [
         {
-          "version": "1.1.1",
-          "date": "2023-02-03T12:00:00+04:00",
-          "localizedDescription": "Fixes for issues found in 1.1 release",
-          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.1.1/VCMI-1.1.1-iOS.ipa",
-          "size": 25570455
-        },
-        {
           "version": "1.2.0",
           "date": "2023-04-14T12:00:00+04:00",
           "localizedDescription": "Rendering improvements, revamped UI, translations support, bugfixes and many more!",
           "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.2.0/VCMI-1.2.0-iOS.ipa",
           "size": 26346303
+        },
+        {
+          "version": "1.1.1",
+          "date": "2023-02-03T12:00:00+04:00",
+          "localizedDescription": "Fixes for issues found in 1.1 release",
+          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.1.1/VCMI-1.1.1-iOS.ipa",
+          "size": 25570455
         }
       ],
       
