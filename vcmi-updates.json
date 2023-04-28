@@ -1,17 +1,17 @@
 {
 	"updateType" : "major",
-	"version" : "VCMI 1.2.0",
+	"version" : "VCMI 1.2.1",
 	"downloadLinks" : 
 	{
-		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.2.0",
-		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.2.0",
-		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.2.0",
+		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.2.1",
+		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.2.1",
+		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.2.1",
 		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
-		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.2.0",
+		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.2.1",
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-		"VCMI 1.2.0 was released!\nRendering improvements, revamped UI, translations support, bugfixes and many more!\nRead more on the downloads page."
+		"VCMI 1.2.1 was released!\nMultiple fixes for issues found in 1.2 release.\nRead more on the downloads page."
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -19,6 +19,8 @@
 		"VCMI 1.1.0",
 		"VCMI 1.1.1.b429f0bfeb230de65c771e0edf6e1684a5eb653c",
 		"VCMI 1.1.1",
-		"VCMI 1.2.0.c125e040c305c88f66e7ba8a458ee22e4d455f30"
+		"VCMI 1.2.0.c125e040c305c88f66e7ba8a458ee22e4d455f30",
+		"VCMI 1.2.0",
+		"VCMI 1.2.1.25d5a1555cf51663bb8d8409dbc269dfaf511da8"
 	]
 }
