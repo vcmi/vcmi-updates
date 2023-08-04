@@ -1,6 +1,6 @@
 {
 	"updateType" : "critical",
-	"version" : "VCMI 1.2.1",
+	"version" : "VCMI 1.3.0",
 	"downloadLinks" : 
 	{
 		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.3.0",
