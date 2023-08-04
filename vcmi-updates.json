@@ -1,17 +1,17 @@
 {
 	"updateType" : "critical",
-	"version" : "VCMI 1.2.1",
+	"version" : "VCMI 1.3.0",
 	"downloadLinks" : 
 	{
-		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.2.1",
-		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.2.1",
-		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.2.1",
+		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.3.0",
+		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.3.0",
+		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.3.0",
 		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
-		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.2.1",
+		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.3.0",
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-		"VCMI 1.2.1 was released!\nMultiple fixes for issues found in 1.2 release.\nRead more on the downloads page."
+		"VCMI 1.3.0 was released!\nImproved touchscreen support, better AI, fixes for campaigns, support for HotA maps.\nRead more on the downloads page."
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -21,6 +21,9 @@
 		"VCMI 1.1.1",
 		"VCMI 1.2.0.c125e040c305c88f66e7ba8a458ee22e4d455f30",
 		"VCMI 1.2.0",
-		"VCMI 1.2.1.25d5a1555cf51663bb8d8409dbc269dfaf511da8"
+		"VCMI 1.2.1.25d5a1555cf51663bb8d8409dbc269dfaf511da8",
+		"VCMI 1.2.1",
+		"VCMI 1.3.0.b9729241f1018b4a07f880b319da32f94bf6409b",
+		"VCMI 1.3.0"
 	]
 }
