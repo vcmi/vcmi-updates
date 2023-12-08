@@ -1,17 +1,17 @@
 {
 	"updateType" : "critical",
-	"version" : "VCMI 1.3.2",
+	"version" : "VCMI 1.4.0",
 	"downloadLinks" : 
 	{
-		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.3.2",
-		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.3.2",
-		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.3.2",
+		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.4.0",
+		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.4.0",
+		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.4.0",
 		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
-		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.3.2",
+		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.4.0",
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-		"VCMI 1.3.2 was released!\nStability improvements and fixes for issues found in previous release\nRead more on the downloads page."
+		"VCMI 1.4.0 was released!\nSimultaneous turns support, turn timers, high scores sceen and many more!\nRead more on the downloads page."
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -28,6 +28,8 @@
 		"VCMI 1.3.1.daa8a494fce938e32c842b0ad085d47a87d0c572",
 		"VCMI 1.3.1",
 		"VCMI 1.3.2.cfe87e46a92f90dcfbef487e2ce3b15a86d4eebe",
-		"VCMI 1.3.2"
+		"VCMI 1.3.2",
+		"VCMI 1.4.0.7fc60a08982c17505a065b079e51017dac91fb1e",
+		"VCMI 1.4.0"
 	]
 }
