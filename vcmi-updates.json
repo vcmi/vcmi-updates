@@ -1,17 +1,17 @@
 {
 	"updateType" : "critical",
-	"version" : "VCMI 1.4.2",
+	"version" : "VCMI 1.4.3",
 	"downloadLinks" : 
 	{
-		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.4.2",
-		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.4.2",
-		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.4.2",
+		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.4.3",
+		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.4.3",
+		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.4.3",
 		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
-		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.4.2",
+		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.4.3",
 		"other" : "https://vcmi.eu"
 	},
 	"changeLog" :
-		"VCMI 1.4.2 was released!\nImprovement to random maps, turn timers and multiple bugfixes!\nRead more on the downloads page"
+		"VCMI 1.4.3 was released!\nFixes for over 50 vairious issues, both old and new, as well as some small new features!\nRead more on the downloads page"
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -34,6 +34,7 @@
 		"VCMI 1.4.1.17b2ce2c81eeeb2ac1c46c38f963da2e8ec1d0e4",
 		"VCMI 1.4.1",
 		"VCMI 1.4.2.a577a7466ba7d6b528d25743f36f126618bc9a26",
-		"VCMI 1.4.2"
+		"VCMI 1.4.2",
+		"VCMI 1.4.3"
 	]
 }
