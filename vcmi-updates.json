@@ -10,8 +10,7 @@
 		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.4.5",
 		"other" : "https://vcmi.eu"
 	},
-	"changeLog" :
-		"VCMI 1.4.5 was released!\nFixes for stability issues with previous releases.\nRead more on the downloads page"
+	"changeLog" : "VCMI 1.4.5 was released!\nFixes for stability issues with previous releases.\nRead more on the downloads page",
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
