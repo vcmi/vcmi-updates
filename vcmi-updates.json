@@ -1,16 +1,16 @@
 {
 	"updateType" : "critical",
-	"version" : "VCMI 1.4.5",
+	"version" : "VCMI 1.5.0",
 	"downloadLinks" : 
 	{
-		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.4.5",
-		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.4.5",
-		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.4.5",
-		"linux" : "https://wiki.vcmi.eu/Installation_on_Linux",
-		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.4.5",
+		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.5.0",
+		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.5.0",
+		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.5.0",
+		"linux" : "https://github.com/vcmi/vcmi/releases/tag/1.5.0",
+		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.5.0",
 		"other" : "https://vcmi.eu"
 	},
-	"changeLog" : "VCMI 1.4.5 was released!\nFixes for stability issues with previous releases.\nRead more on the downloads page",
+	"changeLog" : "VCMI 1.5.0 was released!\nOnline lobby is now available!\nRead more on the downloads page",
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -36,6 +36,7 @@
 		"VCMI 1.4.2",
 		"VCMI 1.4.3",
 		"VCMI 1.4.4",
-		"VCMI 1.4.5"
+		"VCMI 1.4.5",
+		"VCMI 1.5.0"
 	]
 }
