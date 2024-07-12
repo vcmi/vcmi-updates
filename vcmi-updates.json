@@ -1,16 +1,16 @@
 {
 	"updateType" : "critical",
-	"version" : "VCMI 1.5.3",
+	"version" : "VCMI 1.5.4",
 	"downloadLinks" : 
 	{
-		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.5.3",
-		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.5.3",
-		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.5.3",
-		"linux" : "https://github.com/vcmi/vcmi/releases/tag/1.5.3",
-		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.5.3",
+		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.5.4",
+		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.5.4",
+		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.5.4",
+		"linux" : "https://github.com/vcmi/vcmi/releases/tag/1.5.4",
+		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.5.4",
 		"other" : "https://vcmi.eu"
 	},
-	"changeLog" : "VCMI 1.5.3 was released with fixes for issues in previous release!\nRead more on the downloads page",
+	"changeLog" : "VCMI 1.5.4 was released with fixes for issues in previous release!\nRead more on the downloads page",
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -40,6 +40,7 @@
 		"VCMI 1.5.0",
 		"VCMI 1.5.1",
 		"VCMI 1.5.2",
-		"VCMI 1.5.3"
+		"VCMI 1.5.3",
+		"VCMI 1.5.4"
 	]
 }
