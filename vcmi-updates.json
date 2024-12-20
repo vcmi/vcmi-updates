@@ -1,16 +1,16 @@
 {
 	"updateType" : "critical",
-	"version" : "VCMI 1.5.7",
+	"version" : "VCMI 1.6.0",
 	"downloadLinks" : 
 	{
-		"macos" : "https://github.com/vcmi/vcmi/releases/tag/1.5.7",
-		"windows" : "https://github.com/vcmi/vcmi/releases/tag/1.5.7",
-		"android" : "https://github.com/vcmi/vcmi/releases/tag/1.5.7",
-		"linux" : "https://github.com/vcmi/vcmi/releases/tag/1.5.7",
-		"ios" : "https://github.com/vcmi/vcmi/releases/tag/1.5.7",
-		"other" : "https://vcmi.eu"
+		"macos"   : "https://vcmi.eu/download/",
+		"windows" : "https://vcmi.eu/download/",
+		"android" : "https://vcmi.eu/download/",
+		"linux"   : "https://vcmi.eu/download/",
+		"ios"     : "https://vcmi.eu/download/",
+		"other"   : "https://vcmi.eu/download/"
 	},
-	"changeLog" : "VCMI 1.5.7 was released with fixes for issues in previous release!\nRead more on the downloads page",
+	"changeLog" : "VCMI 1.6.0 was released with improved AI, better upscaler, Heroes Chronicles support, game statistics and much more!",
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -44,6 +44,7 @@
 		"VCMI 1.5.4",
 		"VCMI 1.5.5",
 		"VCMI 1.5.6",
-		"VCMI 1.5.7"
+		"VCMI 1.5.7",
+		"VCMI 1.6.0"
 	]
 }
