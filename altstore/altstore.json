@@ -10,6 +10,13 @@
       "subtitle": "Heroes of Might & Magic III engine",
       "versions": [
       {
+          "version": "1.6.0",
+          "date": "2024-12-20T12:00:00+04:00",
+          "localizedDescription": "improved AI, better upscaler, Heroes Chronicles support, game statistics and much more",
+          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.6.0/VCMI-iOS.ipa",
+          "size": 20639756
+      },
+      {
           "version": "1.5.7",
           "date": "2024-08-26T12:00:00+04:00",
           "localizedDescription": "Fixes for stability issues with previous releases",
