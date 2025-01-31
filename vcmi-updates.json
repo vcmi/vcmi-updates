@@ -1,6 +1,6 @@
 {
 	"updateType" : "critical",
-	"version" : "VCMI 1.6.3",
+	"version" : "VCMI 1.6.4",
 	"downloadLinks" : 
 	{
 		"macos"   : "https://vcmi.eu/download/",
@@ -10,7 +10,7 @@
 		"ios"     : "https://vcmi.eu/download/",
 		"other"   : "https://vcmi.eu/download/"
 	},
-	"changeLog" : "VCMI 1.6.3 was released with bugfixes and stability improvements for issues found in previous release.",
+	"changeLog" : "VCMI 1.6.4 was released with bugfixes and stability improvements for issues found in previous release.",
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -47,6 +47,8 @@
 		"VCMI 1.5.7",
 		"VCMI 1.6.0",
 		"VCMI 1.6.1",
-		"VCMI 1.6.2"
+		"VCMI 1.6.2",
+		"VCMI 1.6.3",
+		"VCMI 1.6.4"
 	]
 }
