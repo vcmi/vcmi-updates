@@ -10,17 +10,24 @@
       "subtitle": "Heroes of Might & Magic III engine",
       "versions": [
        {
+          "version": "1.6.4",
+          "date": "2025-01-31T12:00:00+04:00",
+          "localizedDescription": "Fixes for stability issues with previous releases",
+          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.6.4/VCMI-iOS.ipa",
+          "size": 20767098
+      },
+       {
           "version": "1.6.3",
           "date": "2025-01-10T12:00:00+04:00",
           "localizedDescription": "Fixes for stability issues with previous releases",
-          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.6.1/VCMI-iOS.ipa",
+          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.6.3/VCMI-iOS.ipa",
           "size": 20716709
       },
       {
           "version": "1.6.2",
           "date": "2025-01-04T12:00:00+04:00",
           "localizedDescription": "Fixes for stability issues with previous releases",
-          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.6.1/VCMI-iOS.ipa",
+          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.6.2/VCMI-iOS.ipa",
           "size": 20690030
       },
       {
