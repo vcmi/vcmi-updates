@@ -1,16 +1,16 @@
 {
   "version": "1.7.0",
-  "commit": "66151ab",
-  "buildDate": "2025-08-27 19:39:00",
+  "commit": "6c08c23",
+  "buildDate": "2025-08-28 13:46:00",
   "changeLog": "Latest nightly build from develop branch.",
   "download": {
-    "windows-x64": "https://builds.vcmi.download/branch/develop/windows-x64/VCMI-branch-develop-66151ab.exe",
-    "windows-x86": "https://builds.vcmi.download/branch/develop/windows-x86/VCMI-branch-develop-66151ab.exe",
-    "windows-arm64": "https://builds.vcmi.download/branch/develop/windows-arm64/VCMI-branch-develop-66151ab.exe",
-    "macos-intel": "https://builds.vcmi.download/branch/develop/macos-intel/VCMI-branch-develop-66151ab.dmg",
-    "macos-arm": "https://builds.vcmi.download/branch/develop/macos-arm/VCMI-branch-develop-66151ab.dmg",
-    "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-66151ab.apk",
-    "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-66151ab.apk",
-    "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-66151ab.ipa"
+    "windows-x64": "https://builds.vcmi.download/branch/develop/windows-x64/VCMI-branch-develop-6c08c23.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/develop/windows-x86/VCMI-branch-develop-6c08c23.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/develop/windows-arm64/VCMI-branch-develop-6c08c23.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/develop/macos-intel/VCMI-branch-develop-6c08c23.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/develop/macos-arm/VCMI-branch-develop-6c08c23.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-6c08c23.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-6c08c23.apk",
+    "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-6c08c23.ipa"
   }
 }
