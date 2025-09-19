@@ -1,15 +1,15 @@
 {
-  "version": "",
-  "commit": "",
-  "buildDate": "",
-  "changeLog": "",
+  "version": "1.7.0",
+  "commit": "b93249b",
+  "buildDate": "2025-09-14 18:36:00",
+  "changeLog": "Latest nightly build from develop branch.",
   "download": {
-    "windows-x64": "",
-    "windows-x86": "",
-    "windows-arm64": "",
-    "macos-intel": "",
-    "macos-arm": "",
-    "android-armeabi-v7a": "",
+    "windows-x64": "https://builds.vcmi.download/branch/develop/windows-x64/VCMI-branch-develop-b93249b.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/develop/windows-x86/VCMI-branch-develop-b93249b.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/develop/windows-arm64/VCMI-branch-develop-b93249b.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/develop/macos-intel/VCMI-branch-develop-b93249b.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/develop/macos-arm/VCMI-branch-develop-b93249b.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-b93249b.apk",
     "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-b93249b.apk",
     "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-b93249b.ipa"
   }
