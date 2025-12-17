@@ -1,16 +1,16 @@
 {
-  "version": "",
-  "commit": "",
-  "buildDate": "",
-  "changeLog": "",
+  "version": "1.7.0",
+  "commit": "74f1a9f",
+  "buildDate": "2025-12-16 22:22:00",
+  "changeLog": "Latest nightly build from beta branch.",
   "download": {
-    "windows-x64": "",
-    "windows-x86": "",
-    "windows-arm64": "",
-    "macos-intel": "",
-    "macos-arm": "",
-    "android-armeabi-v7a": "",
-    "android-arm64-v8a": "",
-    "ios-ios": ""
+    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-74f1a9f.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-74f1a9f.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-74f1a9f.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/beta/macos-intel/VCMI-branch-beta-74f1a9f.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-74f1a9f.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-74f1a9f.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-74f1a9f.apk",
+    "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-74f1a9f.ipa"
   }
 }
