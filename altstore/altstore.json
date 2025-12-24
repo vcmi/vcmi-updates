@@ -10,6 +10,13 @@
       "subtitle": "Heroes of Might & Magic III engine",
       "versions": [
        {
+          "version": "1.7.0",
+          "date": "2025-12-24T12:00:00+00:00",
+          "localizedDescription": "New major update with battle-only mode, configurable keybindings, initial support for HotA 1.7 maps and campaigns, and many more.",
+          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-iOS.ipa",
+          "size": 26811586
+       },
+       {
           "version": "1.6.8",
           "date": "2025-04-25T12:00:00+00:00",
           "localizedDescription": "Fixes for stability issues with previous releases",
