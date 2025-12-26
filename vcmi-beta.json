@@ -1,16 +1,16 @@
 {
   "version": "1.7.0",
-  "commit": "989a24e",
-  "buildDate": "2025-12-23 12:34:00",
+  "commit": "eae55b6",
+  "buildDate": "2025-12-25 21:41:00",
   "changeLog": "Latest nightly build from beta branch.",
   "download": {
-    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-989a24e.exe",
-    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-989a24e.exe",
-    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-989a24e.exe",
-    "macos-intel": "https://builds.vcmi.download/branch/beta/macos-intel/VCMI-branch-beta-989a24e.dmg",
-    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-8401846.dmg",
-    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-8401846.apk",
-    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-989a24e.apk",
-    "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-989a24e.ipa"
+    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-eae55b6.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-eae55b6.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-eae55b6.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/beta/macos-intel/VCMI-branch-beta-42f2147.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-42f2147.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-42f2147.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-eae55b6.apk",
+    "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-eae55b6.ipa"
   }
 }
