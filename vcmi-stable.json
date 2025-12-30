@@ -10,9 +10,9 @@
     "macos-arm": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-macOS-arm.dmg",
     "android-armeabi-v7a": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Android-armeabi-v7a.apk",
     "android-arm64-v8a": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Android-arm64-v8a.apk",
-    "android-x64": "",
+    "android-x86_64": "",
     "android-x86": "",
     "ios-ios": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-iOS.ipa",
-    "android-x86_64": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Android-x86_64.apk"
+    "android-x64": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Android-x86_64.apk"
   }
 }
