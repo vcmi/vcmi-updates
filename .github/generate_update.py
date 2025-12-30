@@ -16,6 +16,8 @@ platform_dirs = {
     "macos-arm": ("macos", "arm"),
     "android-armeabi-v7a": ("android", "armeabi-v7a"),
     "android-arm64-v8a": ("android", "arm64-v8a"),
+    "android-x86_64": ("android", "x64"),
+    "android-x86": ("android", "x86"),
     "ios": ("ios", "ios")
 }
 
@@ -182,8 +184,9 @@ try:
 
     stable_mapping = {
         "windows": {
-            "x64": "VCMI-Windows.exe",
-            "x86": "VCMI-Windows32bit.exe"
+            "x64": "VCMI-Windows-x64.exe",
+            "x86": "VCMI-Windows-x86.exe",
+            "arm64" : "VCMI-Windows-arm64.exe"
         },
         "macos": {
             "arm": "VCMI-macOS-arm.dmg",
@@ -191,7 +194,9 @@ try:
         },
         "android": {
             "armeabi-v7a": "VCMI-Android-armeabi-v7a.apk",
-            "arm64-v8a": "VCMI-Android-arm64-v8a.apk"
+            "arm64-v8a": "VCMI-Android-arm64-v8a.apk",
+            "x86_64": "VCMI-Android-x86_64.apk",
+            "x86": "VCMI-Android-x86.apk",
         },
         "ios": {
             "ios": "VCMI-iOS.ipa"
