@@ -1,6 +1,6 @@
 {
-	"updateType" : "critical",
-	"version" : "VCMI 1.7.0",
+	"updateType" : "major",
+	"version" : "VCMI 1.7.1",
 	"downloadLinks" : 
 	{
 		"macos"   : "https://vcmi.eu/download/",
@@ -10,7 +10,7 @@
 		"ios"     : "https://vcmi.eu/download/",
 		"other"   : "https://vcmi.eu/download/"
 	},
-	"changeLog" : "VCMI 1.7.0 was released with battle-only mode, configurable keybindings, initial support for HotA 1.7 maps and campaigns, and many more!",
+	"changeLog" : "VCMI 1.7.1 was released with fixes for stability issues in previous release",
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -54,6 +54,7 @@
 		"VCMI 1.6.6",
 		"VCMI 1.6.7",
 		"VCMI 1.6.8",
-		"VCMI 1.7.0"
+		"VCMI 1.7.0",
+		"VCMI 1.7.1"
 	]
 }
