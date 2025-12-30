@@ -195,7 +195,7 @@ try:
         "android": {
             "armeabi-v7a": "VCMI-Android-armeabi-v7a.apk",
             "arm64-v8a": "VCMI-Android-arm64-v8a.apk",
-            "x86_64": "VCMI-Android-x86_64.apk",
+            "x64": "VCMI-Android-x86_64.apk",
             "x86": "VCMI-Android-x86.apk",
         },
         "ios": {
