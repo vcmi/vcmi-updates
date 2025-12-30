@@ -16,7 +16,7 @@ platform_dirs = {
     "macos-arm": ("macos", "arm"),
     "android-armeabi-v7a": ("android", "armeabi-v7a"),
     "android-arm64-v8a": ("android", "arm64-v8a"),
-    "android-x86_64": ("android", "x64"),
+    "android-x64": ("android", "x86_64"),
     "android-x86": ("android", "x86"),
     "ios": ("ios", "ios")
 }
