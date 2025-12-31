@@ -1,18 +1,18 @@
 {
-  "version": "1.7.0",
-  "commit": "b21e070",
-  "buildDate": "2025-12-29 15:39:00",
+  "version": "1.7.1",
+  "commit": "70a6bda",
+  "buildDate": "2025-12-30 21:03:00",
   "changeLog": "Latest nightly build from develop branch.",
   "download": {
-    "windows-x64": "https://builds.vcmi.download/branch/develop/windows-x64/VCMI-branch-develop-b21e070.exe",
-    "windows-x86": "https://builds.vcmi.download/branch/develop/windows-x86/VCMI-branch-develop-b21e070.exe",
-    "windows-arm64": "https://builds.vcmi.download/branch/develop/windows-arm64/VCMI-branch-develop-b21e070.exe",
-    "macos-intel": "https://builds.vcmi.download/branch/develop/macos-intel/VCMI-branch-develop-b21e070.dmg",
-    "macos-arm": "https://builds.vcmi.download/branch/develop/macos-arm/VCMI-branch-develop-b21e070.dmg",
-    "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-b21e070.apk",
-    "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-b21e070.apk",
-    "android-x86_64": "https://builds.vcmi.download/branch/develop/android-x64/VCMI-branch-develop-b21e070.apk",
+    "windows-x64": "https://builds.vcmi.download/branch/develop/windows-x64/VCMI-branch-develop-70a6bda.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/develop/windows-x86/VCMI-branch-develop-70a6bda.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/develop/windows-arm64/VCMI-branch-develop-70a6bda.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/develop/macos-intel/VCMI-branch-develop-70a6bda.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/develop/macos-arm/VCMI-branch-develop-70a6bda.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-70a6bda.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-70a6bda.apk",
+    "android-x86_64": "https://builds.vcmi.download/branch/develop/android-x64/VCMI-branch-develop-70a6bda.apk",
     "android-x86": "",
-    "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-b21e070.ipa"
+    "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-70a6bda.ipa"
   }
 }

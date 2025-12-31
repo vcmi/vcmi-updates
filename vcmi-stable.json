@@ -1,18 +1,17 @@
 {
-  "version": "1.7.0",
-  "buildDate": "2025-12-24 16:00:04",
-  "changeLog": "Note: saved games from 1.6 release can be loaded in 1.7\r\n\r\n### Changelog\r\n- Player Changelog: [1.6.8 -> 1.7.0](https://github.com/vcmi/vcmi/blob/master/ChangeLog.md#168---170)\r\n- Full Changelog: https://github.com/vcmi/vcmi/compare/1.6.8..1.7.0\r\n\r\n### Additional builds\r\n<!-- - Android release will be available on Google Play shortly -->\r\n<!-- - Linux release will be available on Flathub shortly -->\r\n<!-- - Ubuntu release will be available on VCMI PPA shortly -->\r\n<!-- - Android release is available on [Google Play](https://play.google.com/store/apps/details?id=is.xyz.vcmi) -->\r\n<!-- - Linux release is available on [Flathub](https://flathub.org/apps/eu.vcmi.VCMI) -->\r\n<!-- - Ubuntu release is available on [VCMI PPA](https://launchpad.net/~vcmi/+archive/ubuntu/ppa) -->\r\n\r\n- Android release is available on [Google Play](https://play.google.com/store/apps/details?id=is.xyz.vcmi)\r\n- Linux release is available on [Flathub](https://flathub.org/apps/eu.vcmi.VCMI)\r\n- Ubuntu release is available on [VCMI PPA](https://launchpad.net/~vcmi/+archive/ubuntu/ppa)\r\n- macOS release can be installed via Homebrew: `brew install --cask --no-quarantine vcmi/vcmi/vcmi`",
+  "version": "1.7.1",
+  "buildDate": "2025-12-30 20:00:34",
+  "changeLog": "Note: saved games from 1.6 release can be loaded in 1.7\r\n\r\n### Changelog\r\n- Player Changelog: [1.7.0 -> 1.7.1](https://github.com/vcmi/vcmi/blob/master/ChangeLog.md#170---171)\r\n- Full Changelog: https://github.com/vcmi/vcmi/compare/1.7.0..1.7.1\r\n\r\n### Additional builds\r\n<!-- - Android release will be available on Google Play shortly -->\r\n<!-- - Linux release will be available on Flathub shortly -->\r\n<!-- - Ubuntu release will be available on VCMI PPA shortly -->\r\n<!-- - Android release is available on [Google Play](https://play.google.com/store/apps/details?id=is.xyz.vcmi) -->\r\n<!-- - Linux release is available on [Flathub](https://flathub.org/apps/eu.vcmi.VCMI) -->\r\n<!-- - Ubuntu release is available on [VCMI PPA](https://launchpad.net/~vcmi/+archive/ubuntu/ppa) -->\r\n\r\n- Android release is available on [Google Play](https://play.google.com/store/apps/details?id=is.xyz.vcmi)\r\n- Linux release is available on [Flathub](https://flathub.org/apps/eu.vcmi.VCMI)\r\n- Ubuntu release is available on [VCMI PPA](https://launchpad.net/~vcmi/+archive/ubuntu/ppa)\r\n- macOS release can be installed via Homebrew: `brew install --cask --no-quarantine vcmi/vcmi/vcmi`",
   "download": {
-    "windows-x64": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Windows-x64.exe",
-    "windows-x86": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Windows-x86.exe",
-    "windows-arm64": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Windows-arm64.exe",
-    "macos-intel": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-macOS-intel.dmg",
-    "macos-arm": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-macOS-arm.dmg",
-    "android-armeabi-v7a": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Android-armeabi-v7a.apk",
-    "android-arm64-v8a": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Android-arm64-v8a.apk",
-    "android-x86_64": "",
+    "windows-x64": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Windows-x64.exe",
+    "windows-x86": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Windows-x86.exe",
+    "windows-arm64": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Windows-arm64.exe",
+    "macos-intel": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-macOS-intel.dmg",
+    "macos-arm": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-macOS-arm.dmg",
+    "android-armeabi-v7a": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Android-armeabi-v7a.apk",
+    "android-arm64-v8a": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Android-arm64-v8a.apk",
+    "android-x86_64": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Android-x86_64.apk",
     "android-x86": "",
-    "ios-ios": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-iOS.ipa",
-    "android-x64": "https://github.com/vcmi/vcmi/releases/download/1.7.0/VCMI-Android-x86_64.apk"
+    "ios-ios": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-iOS.ipa"
   }
 }
