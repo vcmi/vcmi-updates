@@ -17,7 +17,7 @@ platform_dirs = {
     "android-armeabi-v7a": ("android", "armeabi-v7a"),
     "android-arm64-v8a": ("android", "arm64-v8a"),
     "android-x64": ("android", "x86_64"),
-    "android-x86": ("android", "x86"),
+    # "android-x86": ("android", "x86"),
     "ios": ("ios", "ios")
 }
 
@@ -196,7 +196,7 @@ try:
             "armeabi-v7a": "VCMI-Android-armeabi-v7a.apk",
             "arm64-v8a": "VCMI-Android-arm64-v8a.apk",
             "x86_64": "VCMI-Android-x86_64.apk",
-            "x86": "VCMI-Android-x86.apk",
+            #"x86": "VCMI-Android-x86.apk",
         },
         "ios": {
             "ios": "VCMI-iOS.ipa"
