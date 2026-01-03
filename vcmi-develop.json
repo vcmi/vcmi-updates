@@ -12,7 +12,6 @@
     "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-70a6bda.apk",
     "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-70a6bda.apk",
     "android-x86_64": "https://builds.vcmi.download/branch/develop/android-x64/VCMI-branch-develop-70a6bda.apk",
-    "android-x86": "",
     "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-70a6bda.ipa"
   }
 }

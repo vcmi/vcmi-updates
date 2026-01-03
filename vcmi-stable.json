@@ -11,7 +11,6 @@
     "android-armeabi-v7a": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Android-armeabi-v7a.apk",
     "android-arm64-v8a": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Android-arm64-v8a.apk",
     "android-x86_64": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-Android-x86_64.apk",
-    "android-x86": "",
     "ios-ios": "https://github.com/vcmi/vcmi/releases/download/1.7.1/VCMI-iOS.ipa"
   }
 }
