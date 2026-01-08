@@ -1,17 +1,17 @@
 {
   "version": "1.7.1",
-  "commit": "e933b22",
-  "buildDate": "2026-01-06 21:14:00",
+  "commit": "2ced9ee",
+  "buildDate": "2026-01-07 20:27:00",
   "changeLog": "Latest nightly build from beta branch.",
   "download": {
-    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-e933b22.exe",
-    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-e933b22.exe",
-    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-e933b22.exe",
-    "macos-intel": "https://builds.vcmi.download/branch/beta/macos-intel/VCMI-branch-beta-e933b22.dmg",
-    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-e933b22.dmg",
-    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-e933b22.apk",
-    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-e933b22.apk",
-    "android-x86_64": "https://builds.vcmi.download/branch/beta/android-x64/VCMI-branch-beta-e933b22.apk",
-    "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-e933b22.ipa"
+    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-2ced9ee.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-2ced9ee.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-2ced9ee.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/beta/macos-intel/VCMI-branch-beta-2ced9ee.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-2ced9ee.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-2ced9ee.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-2ced9ee.apk",
+    "android-x86_64": "https://builds.vcmi.download/branch/beta/android-x64/VCMI-branch-beta-2ced9ee.apk",
+    "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-2ced9ee.ipa"
   }
 }
