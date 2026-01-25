@@ -7,7 +7,7 @@
     "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-c52dfed.exe",
     "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-c52dfed.exe",
     "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-c52dfed.exe",
-    "macos-intel": "https://builds.vcmi.download/branch/beta/macos-intel/VCMI-branch-beta-c52dfed.dmg",
+    "macos-intel": "",
     "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-c52dfed.dmg",
     "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-c52dfed.apk",
     "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-c52dfed.apk",
