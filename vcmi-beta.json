@@ -1,17 +1,17 @@
 {
   "version": "1.7.2",
-  "commit": "c52dfed",
-  "buildDate": "2026-01-23 13:49:00",
+  "commit": "d88ac39",
+  "buildDate": "2026-01-25 17:07:00",
   "changeLog": "Latest nightly build from beta branch.",
   "download": {
-    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-c52dfed.exe",
-    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-c52dfed.exe",
-    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-c52dfed.exe",
+    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-d88ac39.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-d88ac39.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-d88ac39.exe",
     "macos-intel": "",
-    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-c52dfed.dmg",
-    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-c52dfed.apk",
-    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-c52dfed.apk",
-    "android-x86_64": "https://builds.vcmi.download/branch/beta/android-x64/VCMI-branch-beta-c52dfed.apk",
-    "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-c52dfed.ipa"
+    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-d88ac39.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-d88ac39.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-d88ac39.apk",
+    "android-x86_64": "https://builds.vcmi.download/branch/beta/android-x64/VCMI-branch-beta-d88ac39.apk",
+    "ios-ios": ""
   }
 }
