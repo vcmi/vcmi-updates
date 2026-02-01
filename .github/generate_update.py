@@ -1,4 +1,5 @@
 import urllib.request
+import urllib.error
 import re
 from datetime import datetime, timezone
 from dateutil import parser
@@ -6,6 +7,12 @@ import json
 import tempfile
 import pefile
 from collections import OrderedDict
+
+DEBUG = True
+
+def debug_print(msg):
+    if DEBUG:
+        print(msg)
 
 # Folder name → (system, variant)
 platform_dirs = {
@@ -16,6 +23,8 @@ platform_dirs = {
     "macos-arm": ("macos", "arm"),
     "android-armeabi-v7a": ("android", "armeabi-v7a"),
     "android-arm64-v8a": ("android", "arm64-v8a"),
+    "android-x64": ("android", "x86_64"),
+    # "android-x86": ("android", "x86"),
     "ios": ("ios", "ios")
 }
 
@@ -29,16 +38,57 @@ extensions = {
 
 def fetch_html(url):
     """Download and return HTML content from directory listing."""
-    with urllib.request.urlopen(url) as response:
-        return response.read().decode("utf-8")
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                          "(KHTML, like Gecko) Chrome/122.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        }
+    )
+
+    try:
+        with urllib.request.urlopen(req) as response:
+            status = getattr(response, "status", 200)
+            data = response.read()
+            debug_print(f"🌐 {url} -> HTTP {status}, {len(data)} bytes")
+            return data.decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as e:
+        debug_print(f"❌ {url} -> HTTPError {e.code}")
+        raise
+    except urllib.error.URLError as e:
+        debug_print(f"❌ {url} -> URLError {e}")
+        raise
 
 def extract_file_and_date(html, ext, system="", variant="", url=""):
     """Extract the most recent file based on the date column."""
+    pattern = (
+        r'<tr><td><a href="([^"]+%s)".*?</a></td>'
+        r'<td[^>]*>\s*\d+\s*</td><td[^>]*>([^<]+)</td>'
+    ) % re.escape(ext)
+
     rows = re.findall(
-        r'<tr><td><a href="([^"]+%s)".*?</a></td><td[^>]*>\s*\d+\s*</td><td[^>]*>([^<]+)</td>' % re.escape(ext),
+        pattern,
         html,
         flags=re.IGNORECASE
     )
+
+    if DEBUG:
+        debug_print(f"🔎 regex rows for {system}/{variant} ({ext}) at {url}: {len(rows)}")
+        if not rows:
+            sample_lines = []
+            for line in html.splitlines():
+                if ext.lower() in line.lower():
+                    sample_lines.append(line.strip())
+                    if len(sample_lines) >= 3:
+                        break
+            if sample_lines:
+                debug_print("🧩 sample lines containing extension:")
+                for s in sample_lines:
+                    debug_print("   " + s[:200])
+            else:
+                debug_print("🧩 no lines containing extension found (maybe blocked page / different content)")
+
     if not rows:
         print(f"❌ No match for {system}/{variant} at {url}")
         return None, None
@@ -51,13 +101,20 @@ def extract_file_and_date(html, ext, system="", variant="", url=""):
 
     rows.sort(key=lambda x: parse_date(x[1]), reverse=True)
     filename, date_str = rows[0]
-    print(f"✅ Found newest file for {system}/{variant} → {filename}")
+    print(f"✅ Found newest file for {system}/{variant} → {filename} ({date_str})")
     return filename, date_str
 
 def get_file_version_from_exe_url(url):
     """Extract FileVersion from PE header in EXE."""
     try:
-        with urllib.request.urlopen(url) as response:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                              "(KHTML, like Gecko) Chrome/122.0 Safari/537.36"
+            }
+        )
+        with urllib.request.urlopen(req) as response:
             with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
                 tmp_file.write(response.read())
                 tmp_path = tmp_file.name
@@ -95,6 +152,7 @@ channels = ["develop", "beta"]
 channel_results = {}
 
 for channel in channels:
+    print(f"\n===== {channel} =====")
     base_url = f"https://builds.vcmi.download/branch/{channel}"
     channel_obj = make_empty_channel()
     found_any = False  # track if we found at least one artifact
@@ -104,16 +162,14 @@ for channel in channels:
     try:
         html = fetch_html(win_url)
     except Exception as e:
+        print(f"⚠️ Anchor fetch failed: {win_url} -> {e}")
         html = ""
+
     filename, date_str = extract_file_and_date(html, ".exe", "windows", "x64", win_url)
 
     if filename and date_str:
-        # we have our anchor → set metadata
         build_hash_match = re.search(r'VCMI-branch-[\w\-]+-([a-fA-F0-9]+)\.exe', filename)
-        if build_hash_match:
-            build_hash = build_hash_match.group(1)
-        else:
-            build_hash = ""
+        build_hash = build_hash_match.group(1) if build_hash_match else ""
 
         build_date = ""
         try:
@@ -123,42 +179,33 @@ for channel in channels:
 
         exe_url = f"{win_url}{filename}"
         version_string = get_file_version_from_exe_url(exe_url) or ""
-        
+
         channel_obj["version"] = version_string
         channel_obj["commit"] = build_hash
         channel_obj["buildDate"] = build_date
         channel_obj["changeLog"] = f"Latest nightly build from {channel} branch."
-        
-        # Set the anchor platform download here to avoid re-fetching and duplicate logs
         channel_obj["download"]["windows-x64"] = exe_url
 
-        # Record that we found at least something
-        found_any = True
-        # also record the windows-x64 download below in the general loop
-
-    # Try to find files for all platforms (fills downloads, independent of metadata)
+    # Try to find files for all platforms
     for folder_name, (system, variant) in platform_dirs.items():
-        # We already processed windows-x64 as the anchor; skip to avoid duplicate log lines
         if folder_name == "windows-x64":
             continue
-    
+
         url = f"{base_url}/{folder_name}/"
         try:
             html = fetch_html(url)
-        except Exception:
+        except Exception as e:
+            print(f"⚠️ Fetch failed: {url} -> {e}")
             continue
-    
-        # Use a different name to avoid shadowing the outer 'filename'
+
         fname, _ = extract_file_and_date(html, extensions[system], system, variant, url)
         if not fname:
             continue
-    
+
         download_url = url + fname
         key = f"{system}-{variant}"
         channel_obj["download"][key] = download_url
 
-    # If nothing at all was found for this channel, keep everything empty
-    # (channel_obj already initialized as empty)
     channel_results[channel] = channel_obj
 
 # Write develop and beta JSON
@@ -171,7 +218,11 @@ for channel, data in channel_results.items():
 # Stable channel from GitHub releases
 print("\n🔍 Fetching stable release from GitHub...")
 try:
-    with urllib.request.urlopen("https://api.github.com/repos/vcmi/vcmi/releases/latest") as response:
+    req = urllib.request.Request(
+        "https://api.github.com/repos/vcmi/vcmi/releases/latest",
+        headers={"User-Agent": "vcmi-update-script/1.0"}
+    )
+    with urllib.request.urlopen(req) as response:
         release = json.load(response)
 
     stable_obj = OrderedDict()
@@ -182,8 +233,9 @@ try:
 
     stable_mapping = {
         "windows": {
-            "x64": "VCMI-Windows.exe",
-            "x86": "VCMI-Windows32bit.exe"
+            "x64": "VCMI-Windows-x64.exe",
+            "x86": "VCMI-Windows-x86.exe",
+            "arm64": "VCMI-Windows-arm64.exe"
         },
         "macos": {
             "arm": "VCMI-macOS-arm.dmg",
@@ -191,7 +243,8 @@ try:
         },
         "android": {
             "armeabi-v7a": "VCMI-Android-armeabi-v7a.apk",
-            "arm64-v8a": "VCMI-Android-arm64-v8a.apk"
+            "arm64-v8a": "VCMI-Android-arm64-v8a.apk",
+            "x86_64": "VCMI-Android-x86_64.apk",
         },
         "ios": {
             "ios": "VCMI-iOS.ipa"
