@@ -1,16 +1,17 @@
 {
-  "version": "",
-  "commit": "",
-  "buildDate": "",
-  "changeLog": "",
+  "version": "1.8.0",
+  "commit": "39817d1",
+  "buildDate": "2026-01-17 06:59:00",
+  "changeLog": "Latest nightly build from develop branch.",
   "download": {
-    "windows-x64": "",
-    "windows-x86": "",
-    "windows-arm64": "",
-    "macos-intel": "",
-    "macos-arm": "",
-    "android-armeabi-v7a": "",
-    "android-arm64-v8a": "",
-    "ios-ios": ""
+    "windows-x64": "https://builds.vcmi.download/branch/develop/windows-x64/VCMI-branch-develop-39817d1.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/develop/windows-x86/VCMI-branch-develop-39817d1.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/develop/windows-arm64/VCMI-branch-develop-39817d1.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/develop/macos-intel/VCMI-branch-develop-39817d1.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/develop/macos-arm/VCMI-branch-develop-39817d1.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-39817d1.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-39817d1.apk",
+    "android-x86_64": "https://builds.vcmi.download/branch/develop/android-x64/VCMI-branch-develop-39817d1.apk",
+    "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-39817d1.ipa"
   }
 }
