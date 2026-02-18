@@ -35,7 +35,7 @@ extensions = {
     "windows": ".exe",
     "macos": ".dmg",
     "android": ".apk",
-    "linux": ".AppImage"
+    "linux": ".AppImage",
     "ios": ".ipa"
 }
 
