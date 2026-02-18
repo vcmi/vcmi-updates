@@ -12,6 +12,8 @@
     "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-9ca62a1.apk",
     "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-9ca62a1.apk",
     "android-x86_64": "https://builds.vcmi.download/branch/beta/android-x64/VCMI-branch-beta-9ca62a1.apk",
+    "linux-x86_64": "https://builds.vcmi.download/branch/beta/linux-x86_64/VCMI-branch-beta-9ca62a1.AppImage",
+    "linux-arm64": "https://builds.vcmi.download/branch/beta/linux-arm64/VCMI-branch-beta-9ca62a1.AppImage",
     "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-9ca62a1.ipa"
   }
 }
