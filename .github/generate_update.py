@@ -25,6 +25,8 @@ platform_dirs = {
     "android-arm64-v8a": ("android", "arm64-v8a"),
     "android-x64": ("android", "x86_64"),
     # "android-x86": ("android", "x86"),
+    "linux-x86_64": ("linux", "x86_64"),
+    "linux-arm64": ("linux", "arm64"),
     "ios": ("ios", "ios")
 }
 
@@ -33,6 +35,7 @@ extensions = {
     "windows": ".exe",
     "macos": ".dmg",
     "android": ".apk",
+    "linux": ".AppImage",
     "ios": ".ipa"
 }
 
@@ -245,6 +248,10 @@ try:
             "armeabi-v7a": "VCMI-Android-armeabi-v7a.apk",
             "arm64-v8a": "VCMI-Android-arm64-v8a.apk",
             "x86_64": "VCMI-Android-x86_64.apk",
+        },
+        "linux": {
+            "x86_64": "VCMI-Linux-x86_64.AppImage",
+            "arm64": "VCMI-Linux-arm64.AppImage",
         },
         "ios": {
             "ios": "VCMI-iOS.ipa"
