@@ -1,19 +1,19 @@
 {
   "version": "1.7.3",
-  "commit": "db372bb",
-  "buildDate": "2026-02-24 11:32:00",
+  "commit": "d1591a5",
+  "buildDate": "2026-02-25 21:44:00",
   "changeLog": "Latest nightly build from beta branch.",
   "download": {
-    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-db372bb.exe",
-    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-db372bb.exe",
-    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-db372bb.exe",
-    "macos-intel": "https://builds.vcmi.download/branch/beta/macos-intel/VCMI-branch-beta-db372bb.dmg",
-    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-db372bb.dmg",
-    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-db372bb.apk",
-    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-db372bb.apk",
-    "android-x86_64": "https://builds.vcmi.download/branch/beta/android-x64/VCMI-branch-beta-db372bb.apk",
-    "linux-x86_64": "https://builds.vcmi.download/branch/beta/linux-x86_64/VCMI-branch-beta-db372bb.AppImage",
-    "linux-arm64": "https://builds.vcmi.download/branch/beta/linux-arm64/VCMI-branch-beta-db372bb.AppImage",
-    "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-db372bb.ipa"
+    "windows-x64": "https://builds.vcmi.download/branch/beta/windows-x64/VCMI-branch-beta-d1591a5.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/beta/windows-x86/VCMI-branch-beta-d1591a5.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/beta/windows-arm64/VCMI-branch-beta-d1591a5.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/beta/macos-intel/VCMI-branch-beta-d1591a5.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/beta/macos-arm/VCMI-branch-beta-d1591a5.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/beta/android-armeabi-v7a/VCMI-branch-beta-d1591a5.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/beta/android-arm64-v8a/VCMI-branch-beta-d1591a5.apk",
+    "android-x86_64": "https://builds.vcmi.download/branch/beta/android-x64/VCMI-branch-beta-d1591a5.apk",
+    "linux-x86_64": "https://builds.vcmi.download/branch/beta/linux-x86_64/VCMI-branch-beta-d1591a5.AppImage",
+    "linux-arm64": "https://builds.vcmi.download/branch/beta/linux-arm64/VCMI-branch-beta-d1591a5.AppImage",
+    "ios-ios": "https://builds.vcmi.download/branch/beta/ios/VCMI-branch-beta-d1591a5.ipa"
   }
 }
