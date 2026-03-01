@@ -1,6 +1,6 @@
 {
 	"updateType" : "major",
-	"version" : "VCMI 1.7.2",
+	"version" : "VCMI 1.7.3",
 	"downloadLinks" : 
 	{
 		"macos"   : "https://vcmi.eu/download/",
@@ -10,7 +10,7 @@
 		"ios"     : "https://vcmi.eu/download/",
 		"other"   : "https://vcmi.eu/download/"
 	},
-	"changeLog" : "VCMI 1.7.2 was released with new features and fixes for numerous issues in previous release",
+	"changeLog" : "VCMI 1.7.3 was released with new features and fixes for numerous issues in previous release",
 	"history" : 
 	[
 		"VCMI 1.0.0.cedc9a92ede66b3f9fff079022ea287a012330a5",
@@ -56,6 +56,7 @@
 		"VCMI 1.6.8",
 		"VCMI 1.7.0",
 		"VCMI 1.7.1",
-		"VCMI 1.7.2"
+		"VCMI 1.7.2",
+		"VCMI 1.7.3"
 	]
 }
