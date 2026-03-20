@@ -1,19 +1,19 @@
 {
   "version": "1.8.0",
-  "commit": "38178d8",
-  "buildDate": "2026-03-18 23:10:00",
+  "commit": "7360cfe",
+  "buildDate": "2026-03-19 14:19:00",
   "changeLog": "Latest nightly build from develop branch.",
   "download": {
-    "windows-x64": "https://builds.vcmi.download/branch/develop/windows-x64/VCMI-branch-develop-38178d8.exe",
-    "windows-x86": "https://builds.vcmi.download/branch/develop/windows-x86/VCMI-branch-develop-38178d8.exe",
-    "windows-arm64": "https://builds.vcmi.download/branch/develop/windows-arm64/VCMI-branch-develop-38178d8.exe",
-    "macos-intel": "https://builds.vcmi.download/branch/develop/macos-intel/VCMI-branch-develop-38178d8.dmg",
-    "macos-arm": "https://builds.vcmi.download/branch/develop/macos-arm/VCMI-branch-develop-38178d8.dmg",
-    "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-38178d8.apk",
-    "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-38178d8.apk",
-    "android-x86_64": "https://builds.vcmi.download/branch/develop/android-x64/VCMI-branch-develop-38178d8.apk",
-    "linux-x86_64": "https://builds.vcmi.download/branch/develop/linux-x86_64/VCMI-branch-develop-38178d8.AppImage",
-    "linux-arm64": "https://builds.vcmi.download/branch/develop/linux-arm64/VCMI-branch-develop-38178d8.AppImage",
-    "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-38178d8.ipa"
+    "windows-x64": "https://builds.vcmi.download/branch/develop/windows-x64/VCMI-branch-develop-7360cfe.exe",
+    "windows-x86": "https://builds.vcmi.download/branch/develop/windows-x86/VCMI-branch-develop-7360cfe.exe",
+    "windows-arm64": "https://builds.vcmi.download/branch/develop/windows-arm64/VCMI-branch-develop-7360cfe.exe",
+    "macos-intel": "https://builds.vcmi.download/branch/develop/macos-intel/VCMI-branch-develop-7360cfe.dmg",
+    "macos-arm": "https://builds.vcmi.download/branch/develop/macos-arm/VCMI-branch-develop-7360cfe.dmg",
+    "android-armeabi-v7a": "https://builds.vcmi.download/branch/develop/android-armeabi-v7a/VCMI-branch-develop-7360cfe.apk",
+    "android-arm64-v8a": "https://builds.vcmi.download/branch/develop/android-arm64-v8a/VCMI-branch-develop-7360cfe.apk",
+    "android-x86_64": "https://builds.vcmi.download/branch/develop/android-x64/VCMI-branch-develop-7360cfe.apk",
+    "linux-x86_64": "https://builds.vcmi.download/branch/develop/linux-x86_64/VCMI-branch-develop-7360cfe.AppImage",
+    "linux-arm64": "https://builds.vcmi.download/branch/develop/linux-arm64/VCMI-branch-develop-7360cfe.AppImage",
+    "ios-ios": "https://builds.vcmi.download/branch/develop/ios/VCMI-branch-develop-7360cfe.ipa"
   }
 }
