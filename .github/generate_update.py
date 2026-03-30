@@ -83,6 +83,25 @@ def parse_iso_datetime(value):
     except Exception:
         return None
 
+def short_sha(value, length=7):
+    if not value:
+        return ""
+    return str(value)[:length]
+
+def fetch_commit_datetime(repo_owner, repo_name, commit_sha):
+    """Fetch commit datetime from GitHub API for the provided commit SHA."""
+    if not commit_sha:
+        return None
+
+    try:
+        commit_obj = fetch_json(f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits/{commit_sha}")
+    except Exception as e:
+        print(f"⚠️ Could not fetch commit metadata for {commit_sha}: {e}")
+        return None
+
+    commit_info = commit_obj.get("commit", {}) if isinstance(commit_obj, dict) else {}
+    return parse_iso_datetime(commit_info.get("committer", {}).get("date", ""))
+
 def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=None):
     """
     Build changelog from latest merge commits in a branch.
@@ -130,6 +149,7 @@ def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=N
             merged_day = merged_dt.strftime("%Y-%m-%d") if merged_dt else "unknown-date"
             entries.append({
                 "day": merged_day,
+                "merge_sha": short_sha(item.get("sha", "")),
                 "pr_number": pr_number,
                 "pr_title": pr_title,
             })
@@ -141,24 +161,15 @@ def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=N
         page += 1
 
     if not entries:
-        if since_dt:
-            return (
-                f"### Changelog ({branch})\n\n"
-                f"No merged PRs found since **{since_dt.strftime('%Y-%m-%d')}**."
-            )
-        return f"### Changelog ({branch})\n\nLatest nightly build from `{branch}` branch."
+        return f"No merged PRs found for `{branch}`."
 
     lines = []
-    if since_dt:
-        lines.append(f"### Merged PRs since stable release ({since_dt.strftime('%Y-%m-%d')})")
-    else:
-        lines.append("### Recent merged PRs")
-
-    lines.append("")
     for entry in entries:
         pr_number = entry["pr_number"]
         pr_link = f"https://github.com/{repo_owner}/{repo_name}/pull/{pr_number}"
-        lines.append(f"- {entry['day']} — [#{pr_number}]({pr_link}) {entry['pr_title']}")
+        merge_sha = entry.get("merge_sha", "")
+        merge_part = f" {merge_sha}" if merge_sha else ""
+        lines.append(f"• {entry['day']}{merge_part} — [#{pr_number}]({pr_link}) {entry['pr_title']}")
 
     return "\n".join(lines)
 
@@ -293,10 +304,15 @@ for channel in channels:
         build_hash = build_hash_match.group(1) if build_hash_match else ""
 
         build_date = ""
-        try:
-            build_date = datetime.strptime(date_str, "%Y-%b-%d %H:%M").strftime("%Y-%m-%d %H:%M:%S")
-        except Exception:
-            pass
+        commit_dt = fetch_commit_datetime("vcmi", "vcmi", build_hash)
+        if commit_dt:
+            build_date = commit_dt.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+        else:
+            # Fallback to upload/listing timestamp when commit metadata is unavailable.
+            try:
+                build_date = datetime.strptime(date_str, "%Y-%b-%d %H:%M").strftime("%Y-%m-%d %H:%M:%S")
+            except Exception:
+                pass
 
         exe_url = f"{win_url}{filename}"
         version_string = get_file_version_from_exe_url(exe_url) or ""
