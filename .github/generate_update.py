@@ -62,6 +62,62 @@ def fetch_html(url):
         debug_print(f"❌ {url} -> URLError {e}")
         raise
 
+def fetch_json(url, user_agent="vcmi-update-script/1.0"):
+    """Download and return JSON payload."""
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": user_agent,
+            "Accept": "application/vnd.github+json",
+        }
+    )
+    with urllib.request.urlopen(req) as response:
+        return json.load(response)
+
+def build_branch_changelog(repo_owner, repo_name, branch, limit=8):
+    """
+    Build changelog from latest merge commits in a branch.
+    Format: YYYY-MM-DD - #PR_NUMBER PR title
+    """
+    commits_url = (
+        f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits"
+        f"?sha={branch}&per_page=50"
+    )
+    try:
+        commits = fetch_json(commits_url)
+    except Exception as e:
+        print(f"⚠️ Could not fetch changelog commits for {branch}: {e}")
+        return f"Latest nightly build from {branch} branch."
+
+    entries = []
+    for item in commits:
+        commit_info = item.get("commit", {})
+        message = commit_info.get("message", "")
+        if not message.startswith("Merge pull request #"):
+            continue
+
+        first_line, *rest = message.splitlines()
+        pr_match = re.search(r"#(\d+)", first_line)
+        if not pr_match:
+            continue
+        pr_number = pr_match.group(1)
+
+        pr_title = next((line.strip() for line in rest if line.strip()), "")
+        if not pr_title:
+            pr_title = first_line.strip()
+
+        merged_at = commit_info.get("committer", {}).get("date", "")
+        merged_day = merged_at[:10] if len(merged_at) >= 10 else "unknown-date"
+
+        entries.append(f"{merged_day} - #{pr_number} {pr_title}")
+        if len(entries) >= limit:
+            break
+
+    if not entries:
+        return f"Latest nightly build from {branch} branch."
+
+    return "Recent merged PRs:\n" + "\n".join(entries)
+
 def extract_file_and_date(html, ext, system="", variant="", url=""):
     """Extract the most recent file based on the date column."""
     pattern = (
@@ -162,6 +218,7 @@ for channel in channels:
     print(f"\n===== {channel} =====")
     base_url = f"https://download.vcmi.eu/branch/{channel}"
     channel_obj = make_empty_channel()
+    channel_obj["changeLog"] = build_branch_changelog("vcmi", "vcmi", channel)
     found_any = False  # track if we found at least one artifact
 
     # Try to set metadata from Windows x64 (anchor build)
@@ -190,7 +247,6 @@ for channel in channels:
         channel_obj["version"] = version_string
         channel_obj["commit"] = build_hash
         channel_obj["buildDate"] = build_date
-        channel_obj["changeLog"] = f"Latest nightly build from {channel} branch."
         channel_obj["download"]["windows-x64"] = exe_url
 
     # Try to find files for all platforms
