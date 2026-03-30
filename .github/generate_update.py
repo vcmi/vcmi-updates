@@ -74,48 +74,81 @@ def fetch_json(url, user_agent="vcmi-update-script/1.0"):
     with urllib.request.urlopen(req) as response:
         return json.load(response)
 
-def build_branch_changelog(repo_owner, repo_name, branch, limit=8):
+def parse_iso_datetime(value):
+    """Parse GitHub ISO datetime (e.g. 2026-03-30T12:34:56Z)."""
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=None):
     """
     Build changelog from latest merge commits in a branch.
     Format: YYYY-MM-DD - #PR_NUMBER PR title
     """
-    commits_url = (
-        f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits"
-        f"?sha={branch}&per_page=50"
-    )
-    try:
-        commits = fetch_json(commits_url)
-    except Exception as e:
-        print(f"⚠️ Could not fetch changelog commits for {branch}: {e}")
-        return f"Latest nightly build from {branch} branch."
-
     entries = []
-    for item in commits:
-        commit_info = item.get("commit", {})
-        message = commit_info.get("message", "")
-        if not message.startswith("Merge pull request #"):
-            continue
-
-        first_line, *rest = message.splitlines()
-        pr_match = re.search(r"#(\d+)", first_line)
-        if not pr_match:
-            continue
-        pr_number = pr_match.group(1)
-
-        pr_title = next((line.strip() for line in rest if line.strip()), "")
-        if not pr_title:
-            pr_title = first_line.strip()
-
-        merged_at = commit_info.get("committer", {}).get("date", "")
-        merged_day = merged_at[:10] if len(merged_at) >= 10 else "unknown-date"
-
-        entries.append(f"{merged_day} - #{pr_number} {pr_title}")
-        if len(entries) >= limit:
+    page = 1
+    stop_scan = False
+    while page <= 10 and not stop_scan:
+        commits_url = (
+            f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits"
+            f"?sha={branch}&per_page=100&page={page}"
+        )
+        try:
+            commits = fetch_json(commits_url)
+        except Exception as e:
+            print(f"⚠️ Could not fetch changelog commits for {branch} (page {page}): {e}")
             break
 
+        if not isinstance(commits, list) or not commits:
+            break
+
+        for item in commits:
+            commit_info = item.get("commit", {})
+            message = commit_info.get("message", "")
+            merged_dt = parse_iso_datetime(commit_info.get("committer", {}).get("date", ""))
+
+            if since_dt and merged_dt and merged_dt < since_dt:
+                stop_scan = True
+                break
+
+            if not message.startswith("Merge pull request #"):
+                continue
+
+            first_line, *rest = message.splitlines()
+            pr_match = re.search(r"#(\d+)", first_line)
+            if not pr_match:
+                continue
+            pr_number = pr_match.group(1)
+
+            pr_title = next((line.strip() for line in rest if line.strip()), "")
+            if not pr_title:
+                pr_title = first_line.strip()
+
+            merged_day = merged_dt.strftime("%Y-%m-%d") if merged_dt else "unknown-date"
+            entries.append(f"{merged_day} - #{pr_number} {pr_title}")
+
+            if limit is not None and len(entries) >= limit:
+                stop_scan = True
+                break
+
+        page += 1
+
     if not entries:
+        if since_dt:
+            return (
+                f"No merged PRs found on {branch} since "
+                f"{since_dt.strftime('%Y-%m-%d')}."
+            )
         return f"Latest nightly build from {branch} branch."
 
+    if since_dt:
+        return (
+            f"Merged PRs since stable release ({since_dt.strftime('%Y-%m-%d')}):\n"
+            + "\n".join(entries)
+        )
     return "Recent merged PRs:\n" + "\n".join(entries)
 
 def extract_file_and_date(html, ext, system="", variant="", url=""):
@@ -213,12 +246,25 @@ def make_empty_channel():
 # Process nightly branches
 channels = ["develop", "beta"]
 channel_results = {}
+latest_release = None
+stable_published_dt = None
+
+try:
+    latest_release = fetch_json("https://api.github.com/repos/vcmi/vcmi/releases/latest")
+    stable_published_dt = parse_iso_datetime(latest_release.get("published_at", ""))
+except Exception as e:
+    print(f"⚠️ Could not fetch stable release baseline for changelog filtering: {e}")
 
 for channel in channels:
     print(f"\n===== {channel} =====")
     base_url = f"https://download.vcmi.eu/branch/{channel}"
     channel_obj = make_empty_channel()
-    channel_obj["changeLog"] = build_branch_changelog("vcmi", "vcmi", channel)
+    channel_obj["changeLog"] = build_branch_changelog(
+        "vcmi",
+        "vcmi",
+        channel,
+        since_dt=stable_published_dt
+    )
     found_any = False  # track if we found at least one artifact
 
     # Try to set metadata from Windows x64 (anchor build)
@@ -281,12 +327,7 @@ for channel, data in channel_results.items():
 # Stable channel from GitHub releases
 print("\n🔍 Fetching stable release from GitHub...")
 try:
-    req = urllib.request.Request(
-        "https://api.github.com/repos/vcmi/vcmi/releases/latest",
-        headers={"User-Agent": "vcmi-update-script/1.0"}
-    )
-    with urllib.request.urlopen(req) as response:
-        release = json.load(response)
+    release = latest_release or fetch_json("https://api.github.com/repos/vcmi/vcmi/releases/latest")
 
     stable_obj = OrderedDict()
     stable_obj["version"] = release["tag_name"]
