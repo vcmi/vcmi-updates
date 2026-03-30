@@ -2,7 +2,6 @@ import urllib.request
 import urllib.error
 import re
 from datetime import datetime, timezone
-from dateutil import parser
 import json
 import tempfile
 import pefile
@@ -66,14 +65,16 @@ def fetch_html(url):
 def extract_file_and_date(html, ext, system="", variant="", url=""):
     """Extract the most recent file based on the date column."""
     pattern = (
-        r'<tr><td><a href="([^"]+%s)".*?</a></td>'
-        r'<td[^>]*>\s*\d+\s*</td><td[^>]*>([^<]+)</td>'
+        r'<tr[^>]*>\s*'
+        r'<td[^>]*>\s*<a[^>]+href="([^"]+%s)"[^>]*>.*?</a>\s*</td>\s*'
+        r'<td[^>]*>.*?</td>\s*'
+        r'<td[^>]*>([^<]+)</td>'
     ) % re.escape(ext)
 
     rows = re.findall(
         pattern,
         html,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE | re.DOTALL
     )
 
     if DEBUG:
@@ -97,10 +98,13 @@ def extract_file_and_date(html, ext, system="", variant="", url=""):
         return None, None
 
     def parse_date(date_str):
-        try:
-            return datetime.strptime(date_str, "%Y-%b-%d %H:%M")
-        except ValueError:
-            return datetime.min
+        clean_date = re.sub(r"\s+", " ", date_str).strip()
+        for fmt in ("%Y-%b-%d %H:%M", "%Y-%b-%d"):
+            try:
+                return datetime.strptime(clean_date, fmt)
+            except ValueError:
+                continue
+        return datetime.min
 
     rows.sort(key=lambda x: parse_date(x[1]), reverse=True)
     filename, date_str = rows[0]
@@ -230,7 +234,8 @@ try:
 
     stable_obj = OrderedDict()
     stable_obj["version"] = release["tag_name"]
-    stable_obj["buildDate"] = parser.isoparse(release["published_at"]).strftime("%Y-%m-%d %H:%M:%S")
+    published_at = release["published_at"].replace("Z", "+00:00")
+    stable_obj["buildDate"] = datetime.fromisoformat(published_at).strftime("%Y-%m-%d %H:%M:%S")
     stable_obj["changeLog"] = release.get("body", "Latest stable release.")
     stable_obj["download"] = OrderedDict(empty_download_map)
 
