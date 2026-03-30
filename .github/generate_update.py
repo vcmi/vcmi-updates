@@ -128,7 +128,11 @@ def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=N
                 pr_title = first_line.strip()
 
             merged_day = merged_dt.strftime("%Y-%m-%d") if merged_dt else "unknown-date"
-            entries.append(f"{merged_day} - #{pr_number} {pr_title}")
+            entries.append({
+                "day": merged_day,
+                "pr_number": pr_number,
+                "pr_title": pr_title,
+            })
 
             if limit is not None and len(entries) >= limit:
                 stop_scan = True
@@ -139,17 +143,24 @@ def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=N
     if not entries:
         if since_dt:
             return (
-                f"No merged PRs found on {branch} since "
-                f"{since_dt.strftime('%Y-%m-%d')}."
+                f"### Changelog ({branch})\n\n"
+                f"No merged PRs found since **{since_dt.strftime('%Y-%m-%d')}**."
             )
-        return f"Latest nightly build from {branch} branch."
+        return f"### Changelog ({branch})\n\nLatest nightly build from `{branch}` branch."
 
+    lines = []
     if since_dt:
-        return (
-            f"Merged PRs since stable release ({since_dt.strftime('%Y-%m-%d')}):\n"
-            + "\n".join(entries)
-        )
-    return "Recent merged PRs:\n" + "\n".join(entries)
+        lines.append(f"### Merged PRs since stable release ({since_dt.strftime('%Y-%m-%d')})")
+    else:
+        lines.append("### Recent merged PRs")
+
+    lines.append("")
+    for entry in entries:
+        pr_number = entry["pr_number"]
+        pr_link = f"https://github.com/{repo_owner}/{repo_name}/pull/{pr_number}"
+        lines.append(f"- {entry['day']} — [#{pr_number}]({pr_link}) {entry['pr_title']}")
+
+    return "\n".join(lines)
 
 def extract_file_and_date(html, ext, system="", variant="", url=""):
     """Extract the most recent file based on the date column."""
