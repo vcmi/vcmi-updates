@@ -2,7 +2,7 @@
   "version": "1.8.0",
   "commit": "aa9acb4",
   "buildDate": "2026-03-26 14:31:00",
-  "changeLog": "Latest nightly build from develop branch.",
+  "changeLog": "Recent merged PRs:\n2026-03-29 - #7153 Add Agents to develop\n2026-03-27 - #7133 Fix broken relative local include paths\n2026-03-27 - #7134 rmg: break quest zone ownership cycle\n2026-03-26 - #7143 Bump DavidAnson/markdownlint-cli2-action from 22 to 23\n2026-03-26 - #7137 [MMAI] Siege-only models\n2026-03-23 - #7131 mapeditor: fix random artifact inspect crash\n2026-03-22 - #7129 Add DLL_LINKAGE and out-of-line destructors to all exception classes\n2026-03-22 - #7100 mapeditor: fix template editor selection crash",
   "download": {
     "windows-x64": "https://download.vcmi.eu/branch/develop/windows-x64/VCMI-branch-develop-aa9acb4.exe",
     "windows-x86": "https://download.vcmi.eu/branch/develop/windows-x86/VCMI-branch-develop-aa9acb4.exe",

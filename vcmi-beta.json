@@ -2,7 +2,7 @@
   "version": "1.7.3",
   "commit": "3542182",
   "buildDate": "2026-03-26 04:59:00",
-  "changeLog": "Latest nightly build from beta branch.",
+  "changeLog": "Recent merged PRs:\n2026-03-27 - #6748 [1.8?] API for lobby\n2026-03-27 - #7145 Update docs to account for builds migration\n2026-03-27 - #7146 [1.7.4] Fixes\n2026-03-27 - #7148 [1.7.4] Fix tutorial import\n2026-03-27 - #7144 [1.7.4] Add required files for Google TV\n2026-03-26 - #7140 Update daily builds server configuration and maintenance docs\n2026-03-26 - #7136 [1.7.4] Fix MMAI with moat\n2026-03-24 - #7115 New AGENTS.md",
   "download": {
     "windows-x64": "https://download.vcmi.eu/branch/beta/windows-x64/VCMI-branch-beta-3542182.exe",
     "windows-x86": "https://download.vcmi.eu/branch/beta/windows-x86/VCMI-branch-beta-3542182.exe",
