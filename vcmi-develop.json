@@ -1,19 +1,19 @@
 {
-  "version": "",
-  "commit": "",
-  "buildDate": "",
-  "changeLog": "",
+  "version": "1.8.0",
+  "commit": "aa9acb4",
+  "buildDate": "2026-03-26 14:31:00",
+  "changeLog": "Latest nightly build from develop branch.",
   "download": {
-    "windows-x64": "",
-    "windows-x86": "",
-    "windows-arm64": "",
-    "macos-intel": "",
-    "macos-arm": "",
-    "android-armeabi-v7a": "",
-    "android-arm64-v8a": "",
-    "android-x86_64": "",
-    "linux-x86_64": "",
-    "linux-arm64": "",
-    "ios-ios": ""
+    "windows-x64": "https://download.vcmi.eu/branch/develop/windows-x64/VCMI-branch-develop-aa9acb4.exe",
+    "windows-x86": "https://download.vcmi.eu/branch/develop/windows-x86/VCMI-branch-develop-aa9acb4.exe",
+    "windows-arm64": "https://download.vcmi.eu/branch/develop/windows-arm64/VCMI-branch-develop-aa9acb4.exe",
+    "macos-intel": "https://download.vcmi.eu/branch/develop/macos-intel/VCMI-branch-develop-aa9acb4.dmg",
+    "macos-arm": "https://download.vcmi.eu/branch/develop/macos-arm/VCMI-branch-develop-aa9acb4.dmg",
+    "android-armeabi-v7a": "https://download.vcmi.eu/branch/develop/android-armeabi-v7a/VCMI-branch-develop-aa9acb4.apk",
+    "android-arm64-v8a": "https://download.vcmi.eu/branch/develop/android-arm64-v8a/VCMI-branch-develop-aa9acb4.apk",
+    "android-x86_64": "https://download.vcmi.eu/branch/develop/android-x64/VCMI-branch-develop-aa9acb4.apk",
+    "linux-x86_64": "https://download.vcmi.eu/branch/develop/linux-x86_64/VCMI-branch-develop-aa9acb4.AppImage",
+    "linux-arm64": "https://download.vcmi.eu/branch/develop/linux-arm64/VCMI-branch-develop-aa9acb4.AppImage",
+    "ios-ios": "https://download.vcmi.eu/branch/develop/ios/VCMI-branch-develop-aa9acb4.ipa"
   }
 }
