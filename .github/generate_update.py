@@ -168,8 +168,8 @@ def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=N
         pr_number = entry["pr_number"]
         pr_link = f"https://github.com/{repo_owner}/{repo_name}/pull/{pr_number}"
         merge_sha = entry.get("merge_sha", "")
-        merge_part = f" {merge_sha}" if merge_sha else ""
-        lines.append(f"• {entry['day']}{merge_part} — [#{pr_number}]({pr_link}) {entry['pr_title']}")
+        merge_part = f" ({merge_sha})" if merge_sha else ""
+        lines.append(f"• {entry['day']} - [#{pr_number}]({pr_link}){merge_part} {entry['pr_title']}")
 
     return "\n\n".join(lines)
 
