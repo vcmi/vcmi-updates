@@ -171,7 +171,7 @@ def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=N
         merge_part = f" {merge_sha}" if merge_sha else ""
         lines.append(f"• {entry['day']}{merge_part} — [#{pr_number}]({pr_link}) {entry['pr_title']}")
 
-    return "\n".join(lines)
+    return "\n\n".join(lines)
 
 def extract_file_and_date(html, ext, system="", variant="", url=""):
     """Extract the most recent file based on the date column."""
