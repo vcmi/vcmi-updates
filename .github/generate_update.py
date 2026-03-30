@@ -156,7 +156,7 @@ channel_results = {}
 
 for channel in channels:
     print(f"\n===== {channel} =====")
-    base_url = f"https://builds.vcmi.download/branch/{channel}"
+    base_url = f"https://download.vcmi.eu/branch/{channel}"
     channel_obj = make_empty_channel()
     found_any = False  # track if we found at least one artifact
 
