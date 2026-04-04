@@ -2,7 +2,6 @@ import urllib.request
 import urllib.error
 import re
 from datetime import datetime, timezone
-from dateutil import parser
 import json
 import tempfile
 import pefile
@@ -63,17 +62,131 @@ def fetch_html(url):
         debug_print(f"❌ {url} -> URLError {e}")
         raise
 
+def fetch_json(url, user_agent="vcmi-update-script/1.0"):
+    """Download and return JSON payload."""
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": user_agent,
+            "Accept": "application/vnd.github+json",
+        }
+    )
+    with urllib.request.urlopen(req) as response:
+        return json.load(response)
+
+def parse_iso_datetime(value):
+    """Parse GitHub ISO datetime (e.g. 2026-03-30T12:34:56Z)."""
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+def short_sha(value, length=7):
+    if not value:
+        return ""
+    return str(value)[:length]
+
+def fetch_commit_datetime(repo_owner, repo_name, commit_sha):
+    """Fetch commit datetime from GitHub API for the provided commit SHA."""
+    if not commit_sha:
+        return None
+
+    try:
+        commit_obj = fetch_json(f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits/{commit_sha}")
+    except Exception as e:
+        print(f"⚠️ Could not fetch commit metadata for {commit_sha}: {e}")
+        return None
+
+    commit_info = commit_obj.get("commit", {}) if isinstance(commit_obj, dict) else {}
+    return parse_iso_datetime(commit_info.get("committer", {}).get("date", ""))
+
+def build_branch_changelog(repo_owner, repo_name, branch, since_dt=None, limit=None):
+    """
+    Build changelog from latest merge commits in a branch.
+    Format: YYYY-MM-DD - #PR_NUMBER PR title
+    """
+    entries = []
+    page = 1
+    stop_scan = False
+    while page <= 10 and not stop_scan:
+        commits_url = (
+            f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits"
+            f"?sha={branch}&per_page=100&page={page}"
+        )
+        try:
+            commits = fetch_json(commits_url)
+        except Exception as e:
+            print(f"⚠️ Could not fetch changelog commits for {branch} (page {page}): {e}")
+            break
+
+        if not isinstance(commits, list) or not commits:
+            break
+
+        for item in commits:
+            commit_info = item.get("commit", {})
+            message = commit_info.get("message", "")
+            merged_dt = parse_iso_datetime(commit_info.get("committer", {}).get("date", ""))
+
+            if since_dt and merged_dt and merged_dt < since_dt:
+                stop_scan = True
+                break
+
+            if not message.startswith("Merge pull request #"):
+                continue
+
+            first_line, *rest = message.splitlines()
+            pr_match = re.search(r"#(\d+)", first_line)
+            if not pr_match:
+                continue
+            pr_number = pr_match.group(1)
+
+            pr_title = next((line.strip() for line in rest if line.strip()), "")
+            if not pr_title:
+                pr_title = first_line.strip()
+
+            merged_day = merged_dt.strftime("%Y-%m-%d") if merged_dt else "unknown-date"
+            entries.append({
+                "day": merged_day,
+                "merge_sha": short_sha(item.get("sha", "")),
+                "pr_number": pr_number,
+                "pr_title": pr_title,
+            })
+
+            if limit is not None and len(entries) >= limit:
+                stop_scan = True
+                break
+
+        page += 1
+
+    if not entries:
+        return f"No merged PRs found for `{branch}`."
+
+    lines = []
+    for entry in entries:
+        pr_number = entry["pr_number"]
+        pr_link = f"https://github.com/{repo_owner}/{repo_name}/pull/{pr_number}"
+        merge_sha = entry.get("merge_sha", "")
+        merge_part = f" ({merge_sha})" if merge_sha else ""
+        #lines.append(f"• {entry['day']} - [#{pr_number}]({pr_link}){merge_part} {entry['pr_title']}") # Commit in view is good only for debug
+        lines.append(f"• {entry['day']} - [#{pr_number}]({pr_link}) {entry['pr_title']}")
+
+    return "\n\n".join(lines)
+
 def extract_file_and_date(html, ext, system="", variant="", url=""):
     """Extract the most recent file based on the date column."""
     pattern = (
-        r'<tr><td><a href="([^"]+%s)".*?</a></td>'
-        r'<td[^>]*>\s*\d+\s*</td><td[^>]*>([^<]+)</td>'
+        r'<tr[^>]*>\s*'
+        r'<td[^>]*>\s*<a[^>]+href="([^"]+%s)"[^>]*>.*?</a>\s*</td>\s*'
+        r'<td[^>]*>.*?</td>\s*'
+        r'<td[^>]*>([^<]+)</td>'
     ) % re.escape(ext)
 
     rows = re.findall(
         pattern,
         html,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE | re.DOTALL
     )
 
     if DEBUG:
@@ -97,10 +210,13 @@ def extract_file_and_date(html, ext, system="", variant="", url=""):
         return None, None
 
     def parse_date(date_str):
-        try:
-            return datetime.strptime(date_str, "%Y-%b-%d %H:%M")
-        except ValueError:
-            return datetime.min
+        clean_date = re.sub(r"\s+", " ", date_str).strip()
+        for fmt in ("%Y-%b-%d %H:%M", "%Y-%b-%d"):
+            try:
+                return datetime.strptime(clean_date, fmt)
+            except ValueError:
+                continue
+        return datetime.min
 
     rows.sort(key=lambda x: parse_date(x[1]), reverse=True)
     filename, date_str = rows[0]
@@ -153,11 +269,25 @@ def make_empty_channel():
 # Process nightly branches
 channels = ["develop", "beta"]
 channel_results = {}
+latest_release = None
+stable_published_dt = None
+
+try:
+    latest_release = fetch_json("https://api.github.com/repos/vcmi/vcmi/releases/latest")
+    stable_published_dt = parse_iso_datetime(latest_release.get("published_at", ""))
+except Exception as e:
+    print(f"⚠️ Could not fetch stable release baseline for changelog filtering: {e}")
 
 for channel in channels:
     print(f"\n===== {channel} =====")
-    base_url = f"https://builds.vcmi.download/branch/{channel}"
+    base_url = f"https://download.vcmi.eu/branch/{channel}"
     channel_obj = make_empty_channel()
+    channel_obj["changeLog"] = build_branch_changelog(
+        "vcmi",
+        "vcmi",
+        channel,
+        since_dt=stable_published_dt
+    )
     found_any = False  # track if we found at least one artifact
 
     # Try to set metadata from Windows x64 (anchor build)
@@ -175,10 +305,15 @@ for channel in channels:
         build_hash = build_hash_match.group(1) if build_hash_match else ""
 
         build_date = ""
-        try:
-            build_date = datetime.strptime(date_str, "%Y-%b-%d %H:%M").strftime("%Y-%m-%d %H:%M:%S")
-        except Exception:
-            pass
+        commit_dt = fetch_commit_datetime("vcmi", "vcmi", build_hash)
+        if commit_dt:
+            build_date = commit_dt.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+        else:
+            # Fallback to upload/listing timestamp when commit metadata is unavailable.
+            try:
+                build_date = datetime.strptime(date_str, "%Y-%b-%d %H:%M").strftime("%Y-%m-%d %H:%M:%S")
+            except Exception:
+                pass
 
         exe_url = f"{win_url}{filename}"
         version_string = get_file_version_from_exe_url(exe_url) or ""
@@ -186,7 +321,6 @@ for channel in channels:
         channel_obj["version"] = version_string
         channel_obj["commit"] = build_hash
         channel_obj["buildDate"] = build_date
-        channel_obj["changeLog"] = f"Latest nightly build from {channel} branch."
         channel_obj["download"]["windows-x64"] = exe_url
 
     # Try to find files for all platforms
@@ -221,16 +355,12 @@ for channel, data in channel_results.items():
 # Stable channel from GitHub releases
 print("\n🔍 Fetching stable release from GitHub...")
 try:
-    req = urllib.request.Request(
-        "https://api.github.com/repos/vcmi/vcmi/releases/latest",
-        headers={"User-Agent": "vcmi-update-script/1.0"}
-    )
-    with urllib.request.urlopen(req) as response:
-        release = json.load(response)
+    release = latest_release or fetch_json("https://api.github.com/repos/vcmi/vcmi/releases/latest")
 
     stable_obj = OrderedDict()
     stable_obj["version"] = release["tag_name"]
-    stable_obj["buildDate"] = parser.isoparse(release["published_at"]).strftime("%Y-%m-%d %H:%M:%S")
+    published_at = release["published_at"].replace("Z", "+00:00")
+    stable_obj["buildDate"] = datetime.fromisoformat(published_at).strftime("%Y-%m-%d %H:%M:%S")
     stable_obj["changeLog"] = release.get("body", "Latest stable release.")
     stable_obj["download"] = OrderedDict(empty_download_map)
 
