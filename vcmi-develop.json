@@ -1,19 +1,19 @@
 {
   "version": "1.8.0",
-  "commit": "134f8c2",
-  "buildDate": "2026-05-23 10:36:28",
-  "changeLog": "• 2026-05-23 - [#7325](https://github.com/vcmi/vcmi/pull/7325) [1.8.0] mapeditor: adds a widget for editing witch hut preset abilities\n\n• 2026-05-23 - [#7361](https://github.com/vcmi/vcmi/pull/7361) fixes local includes",
+  "commit": "7d72571",
+  "buildDate": "2026-05-25 17:33:52",
+  "changeLog": "• 2026-05-25 - [#7365](https://github.com/vcmi/vcmi/pull/7365) Battle: fix defender-hero hit-test using attackingHero->pos\n\n• 2026-05-25 - [#7366](https://github.com/vcmi/vcmi/pull/7366) [1.8] Battle obstacle positioning fixes\n\n• 2026-05-25 - [#7375](https://github.com/vcmi/vcmi/pull/7375) Deterministic AI - do not rely on pointer ordering\n\n• 2026-05-25 - [#7295](https://github.com/vcmi/vcmi/pull/7295) [1.8.0] Center scenario selection\n\n• 2026-05-25 - [#7377](https://github.com/vcmi/vcmi/pull/7377) Merge beta -> develop\n\n• 2026-05-25 - [#7359](https://github.com/vcmi/vcmi/pull/7359) Fix bug where gate does not open\n\n• 2026-05-23 - [#7325](https://github.com/vcmi/vcmi/pull/7325) [1.8.0] mapeditor: adds a widget for editing witch hut preset abilities\n\n• 2026-05-23 - [#7361](https://github.com/vcmi/vcmi/pull/7361) fixes local includes\n\n• 2026-05-22 - [#7346](https://github.com/vcmi/vcmi/pull/7346) [1.7.5 / 1.8.0] small wiki improvements\n\n• 2026-05-22 - [#7321](https://github.com/vcmi/vcmi/pull/7321) Add more detailed documentation for translations\n\n• 2026-05-22 - [#7350](https://github.com/vcmi/vcmi/pull/7350) [1.7.x?] Added support for Traditional Chinese",
   "download": {
-    "windows-x64": "https://download.vcmi.eu/branch/develop/windows-x64/VCMI-branch-develop-134f8c2.exe",
-    "windows-x86": "https://download.vcmi.eu/branch/develop/windows-x86/VCMI-branch-develop-134f8c2.exe",
-    "windows-arm64": "https://download.vcmi.eu/branch/develop/windows-arm64/VCMI-branch-develop-134f8c2.exe",
-    "macos-intel": "https://download.vcmi.eu/branch/develop/macos-intel/VCMI-branch-develop-134f8c2.dmg",
-    "macos-arm": "https://download.vcmi.eu/branch/develop/macos-arm/VCMI-branch-develop-134f8c2.dmg",
-    "android-armeabi-v7a": "https://download.vcmi.eu/branch/develop/android-armeabi-v7a/VCMI-branch-develop-134f8c2.apk",
-    "android-arm64-v8a": "https://download.vcmi.eu/branch/develop/android-arm64-v8a/VCMI-branch-develop-134f8c2.apk",
-    "android-x86_64": "https://download.vcmi.eu/branch/develop/android-x64/VCMI-branch-develop-134f8c2.apk",
-    "linux-x86_64": "https://download.vcmi.eu/branch/develop/linux-x86_64/VCMI-branch-develop-134f8c2.AppImage",
-    "linux-arm64": "https://download.vcmi.eu/branch/develop/linux-arm64/VCMI-branch-develop-134f8c2.AppImage",
-    "ios-ios": "https://download.vcmi.eu/branch/develop/ios/VCMI-branch-develop-134f8c2.ipa"
+    "windows-x64": "https://download.vcmi.eu/branch/develop/windows-x64/VCMI-branch-develop-7d72571.exe",
+    "windows-x86": "https://download.vcmi.eu/branch/develop/windows-x86/VCMI-branch-develop-7d72571.exe",
+    "windows-arm64": "https://download.vcmi.eu/branch/develop/windows-arm64/VCMI-branch-develop-7d72571.exe",
+    "macos-intel": "https://download.vcmi.eu/branch/develop/macos-intel/VCMI-branch-develop-7d72571.dmg",
+    "macos-arm": "https://download.vcmi.eu/branch/develop/macos-arm/VCMI-branch-develop-7d72571.dmg",
+    "android-armeabi-v7a": "https://download.vcmi.eu/branch/develop/android-armeabi-v7a/VCMI-branch-develop-7d72571.apk",
+    "android-arm64-v8a": "https://download.vcmi.eu/branch/develop/android-arm64-v8a/VCMI-branch-develop-7d72571.apk",
+    "android-x86_64": "https://download.vcmi.eu/branch/develop/android-x64/VCMI-branch-develop-7d72571.apk",
+    "linux-x86_64": "https://download.vcmi.eu/branch/develop/linux-x86_64/VCMI-branch-develop-7d72571.AppImage",
+    "linux-arm64": "https://download.vcmi.eu/branch/develop/linux-arm64/VCMI-branch-develop-7d72571.AppImage",
+    "ios-ios": "https://download.vcmi.eu/branch/develop/ios/VCMI-branch-develop-7d72571.ipa"
   }
 }
