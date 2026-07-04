@@ -1,19 +1,19 @@
 {
   "version": "1.7.4",
-  "commit": "9781128",
-  "buildDate": "2026-06-03 13:43:54",
-  "changeLog": "No merged PRs found for `beta`.",
+  "commit": "2c707f1",
+  "buildDate": "2026-07-03 15:51:56",
+  "changeLog": "• 2026-07-03 - [#7550](https://github.com/vcmi/vcmi/pull/7550) [1.7] update dependencies",
   "download": {
-    "windows-x64": "https://download.vcmi.eu/branch/beta/windows-x64/VCMI-branch-beta-9781128.exe",
-    "windows-x86": "https://download.vcmi.eu/branch/beta/windows-x86/VCMI-branch-beta-9781128.exe",
-    "windows-arm64": "https://download.vcmi.eu/branch/beta/windows-arm64/VCMI-branch-beta-9781128.exe",
-    "macos-intel": "https://download.vcmi.eu/branch/beta/macos-intel/VCMI-branch-beta-9781128.dmg",
-    "macos-arm": "https://download.vcmi.eu/branch/beta/macos-arm/VCMI-branch-beta-9781128.dmg",
-    "android-armeabi-v7a": "https://download.vcmi.eu/branch/beta/android-armeabi-v7a/VCMI-branch-beta-9781128.apk",
-    "android-arm64-v8a": "https://download.vcmi.eu/branch/beta/android-arm64-v8a/VCMI-branch-beta-9781128.apk",
-    "android-x86_64": "https://download.vcmi.eu/branch/beta/android-x64/VCMI-branch-beta-9781128.apk",
-    "linux-x86_64": "https://download.vcmi.eu/branch/beta/linux-x86_64/VCMI-branch-beta-9781128.AppImage",
-    "linux-arm64": "https://download.vcmi.eu/branch/beta/linux-arm64/VCMI-branch-beta-9781128.AppImage",
-    "ios-ios": "https://download.vcmi.eu/branch/beta/ios/VCMI-branch-beta-9781128.ipa"
+    "windows-x64": "https://download.vcmi.eu/branch/beta/windows-x64/VCMI-branch-beta-2c707f1.exe",
+    "windows-x86": "https://download.vcmi.eu/branch/beta/windows-x86/VCMI-branch-beta-2c707f1.exe",
+    "windows-arm64": "https://download.vcmi.eu/branch/beta/windows-arm64/VCMI-branch-beta-2c707f1.exe",
+    "macos-intel": "https://download.vcmi.eu/branch/beta/macos-intel/VCMI-branch-beta-2c707f1.dmg",
+    "macos-arm": "https://download.vcmi.eu/branch/beta/macos-arm/VCMI-branch-beta-2c707f1.dmg",
+    "android-armeabi-v7a": "https://download.vcmi.eu/branch/beta/android-armeabi-v7a/VCMI-branch-beta-2c707f1.apk",
+    "android-arm64-v8a": "https://download.vcmi.eu/branch/beta/android-arm64-v8a/VCMI-branch-beta-2c707f1.apk",
+    "android-x86_64": "https://download.vcmi.eu/branch/beta/android-x64/VCMI-branch-beta-2c707f1.apk",
+    "linux-x86_64": "https://download.vcmi.eu/branch/beta/linux-x86_64/VCMI-branch-beta-2c707f1.AppImage",
+    "linux-arm64": "https://download.vcmi.eu/branch/beta/linux-arm64/VCMI-branch-beta-2c707f1.AppImage",
+    "ios-ios": "https://download.vcmi.eu/branch/beta/ios/VCMI-branch-beta-2c707f1.ipa"
   }
 }
