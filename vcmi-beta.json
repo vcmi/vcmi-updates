@@ -1,19 +1,19 @@
 {
   "version": "1.7.5",
-  "commit": "55a786e",
-  "buildDate": "2026-07-05 12:23:00",
-  "changeLog": "• 2026-07-05 - [#7557](https://github.com/vcmi/vcmi/pull/7557) Fix crash with minizip-ng\n\n• 2026-07-04 - [#7547](https://github.com/vcmi/vcmi/pull/7547) Beta crashfixes\n\n• 2026-07-04 - [#7549](https://github.com/vcmi/vcmi/pull/7549) replace `std::ranges` usage in non-MMAI code\n\n• 2026-07-04 - [#7548](https://github.com/vcmi/vcmi/pull/7548) [cmake][iOS] link vcmiqt statically\n\n• 2026-07-04 - [#7555](https://github.com/vcmi/vcmi/pull/7555) Version bump to 1.7.5\n\n• 2026-07-03 - [#7550](https://github.com/vcmi/vcmi/pull/7550) [1.7] update dependencies",
+  "commit": "895b446",
+  "buildDate": "2026-07-08 13:39:52",
+  "changeLog": "• 2026-07-08 - [#7579](https://github.com/vcmi/vcmi/pull/7579) update dependencies with onnxruntime Windows 7 fix\n\n• 2026-07-05 - [#7557](https://github.com/vcmi/vcmi/pull/7557) Fix crash with minizip-ng\n\n• 2026-07-04 - [#7547](https://github.com/vcmi/vcmi/pull/7547) Beta crashfixes\n\n• 2026-07-04 - [#7549](https://github.com/vcmi/vcmi/pull/7549) replace `std::ranges` usage in non-MMAI code\n\n• 2026-07-04 - [#7548](https://github.com/vcmi/vcmi/pull/7548) [cmake][iOS] link vcmiqt statically\n\n• 2026-07-04 - [#7555](https://github.com/vcmi/vcmi/pull/7555) Version bump to 1.7.5\n\n• 2026-07-03 - [#7550](https://github.com/vcmi/vcmi/pull/7550) [1.7] update dependencies",
   "download": {
-    "windows-x64": "https://download.vcmi.eu/branch/beta/windows-x64/VCMI-branch-beta-55a786e.exe",
-    "windows-x86": "https://download.vcmi.eu/branch/beta/windows-x86/VCMI-branch-beta-55a786e.exe",
-    "windows-arm64": "https://download.vcmi.eu/branch/beta/windows-arm64/VCMI-branch-beta-55a786e.exe",
-    "macos-intel": "https://download.vcmi.eu/branch/beta/macos-intel/VCMI-branch-beta-55a786e.dmg",
-    "macos-arm": "https://download.vcmi.eu/branch/beta/macos-arm/VCMI-branch-beta-55a786e.dmg",
-    "android-armeabi-v7a": "https://download.vcmi.eu/branch/beta/android-armeabi-v7a/VCMI-branch-beta-55a786e.apk",
-    "android-arm64-v8a": "https://download.vcmi.eu/branch/beta/android-arm64-v8a/VCMI-branch-beta-55a786e.apk",
-    "android-x86_64": "https://download.vcmi.eu/branch/beta/android-x64/VCMI-branch-beta-55a786e.apk",
-    "linux-x86_64": "https://download.vcmi.eu/branch/beta/linux-x86_64/VCMI-branch-beta-55a786e.AppImage",
-    "linux-arm64": "https://download.vcmi.eu/branch/beta/linux-arm64/VCMI-branch-beta-55a786e.AppImage",
-    "ios-ios": "https://download.vcmi.eu/branch/beta/ios/VCMI-branch-beta-55a786e.ipa"
+    "windows-x64": "https://download.vcmi.eu/branch/beta/windows-x64/VCMI-branch-beta-895b446.exe",
+    "windows-x86": "https://download.vcmi.eu/branch/beta/windows-x86/VCMI-branch-beta-895b446.exe",
+    "windows-arm64": "https://download.vcmi.eu/branch/beta/windows-arm64/VCMI-branch-beta-895b446.exe",
+    "macos-intel": "https://download.vcmi.eu/branch/beta/macos-intel/VCMI-branch-beta-895b446.dmg",
+    "macos-arm": "https://download.vcmi.eu/branch/beta/macos-arm/VCMI-branch-beta-895b446.dmg",
+    "android-armeabi-v7a": "https://download.vcmi.eu/branch/beta/android-armeabi-v7a/VCMI-branch-beta-895b446.apk",
+    "android-arm64-v8a": "https://download.vcmi.eu/branch/beta/android-arm64-v8a/VCMI-branch-beta-895b446.apk",
+    "android-x86_64": "https://download.vcmi.eu/branch/beta/android-x64/VCMI-branch-beta-895b446.apk",
+    "linux-x86_64": "https://download.vcmi.eu/branch/beta/linux-x86_64/VCMI-branch-beta-895b446.AppImage",
+    "linux-arm64": "https://download.vcmi.eu/branch/beta/linux-arm64/VCMI-branch-beta-895b446.AppImage",
+    "ios-ios": "https://download.vcmi.eu/branch/beta/ios/VCMI-branch-beta-895b446.ipa"
   }
 }
