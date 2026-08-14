@@ -1,19 +1,19 @@
 {
   "version": "1.7.5",
-  "commit": "7572801",
-  "buildDate": "2026-08-09 11:05:31",
-  "changeLog": "• 2026-08-02 - [#7642](https://github.com/vcmi/vcmi/pull/7642) Fix encoding issues with non-ASCII paths and save file names on Windows\n\n• 2026-07-26 - [#7630](https://github.com/vcmi/vcmi/pull/7630) [1.7.5] Fixes for crashes\n\n• 2026-07-08 - [#7579](https://github.com/vcmi/vcmi/pull/7579) update dependencies with onnxruntime Windows 7 fix\n\n• 2026-07-05 - [#7557](https://github.com/vcmi/vcmi/pull/7557) Fix crash with minizip-ng\n\n• 2026-07-04 - [#7547](https://github.com/vcmi/vcmi/pull/7547) Beta crashfixes\n\n• 2026-07-04 - [#7549](https://github.com/vcmi/vcmi/pull/7549) replace `std::ranges` usage in non-MMAI code\n\n• 2026-07-04 - [#7548](https://github.com/vcmi/vcmi/pull/7548) [cmake][iOS] link vcmiqt statically\n\n• 2026-07-04 - [#7555](https://github.com/vcmi/vcmi/pull/7555) Version bump to 1.7.5\n\n• 2026-07-03 - [#7550](https://github.com/vcmi/vcmi/pull/7550) [1.7] update dependencies",
+  "commit": "aca9f7a",
+  "buildDate": "2026-08-13 12:47:29",
+  "changeLog": "No merged PRs found for `beta`.",
   "download": {
-    "windows-x64": "https://download.vcmi.eu/branch/beta/windows-x64/VCMI-branch-beta-7572801.exe",
-    "windows-x86": "https://download.vcmi.eu/branch/beta/windows-x86/VCMI-branch-beta-7572801.exe",
-    "windows-arm64": "https://download.vcmi.eu/branch/beta/windows-arm64/VCMI-branch-beta-7572801.exe",
-    "macos-intel": "https://download.vcmi.eu/branch/beta/macos-intel/VCMI-branch-beta-7572801.dmg",
-    "macos-arm": "https://download.vcmi.eu/branch/beta/macos-arm/VCMI-branch-beta-7572801.dmg",
-    "android-armeabi-v7a": "https://download.vcmi.eu/branch/beta/android-armeabi-v7a/VCMI-branch-beta-7572801.apk",
-    "android-arm64-v8a": "https://download.vcmi.eu/branch/beta/android-arm64-v8a/VCMI-branch-beta-7572801.apk",
-    "android-x86_64": "https://download.vcmi.eu/branch/beta/android-x64/VCMI-branch-beta-7572801.apk",
-    "linux-x86_64": "https://download.vcmi.eu/branch/beta/linux-x86_64/VCMI-branch-beta-7572801.AppImage",
-    "linux-arm64": "https://download.vcmi.eu/branch/beta/linux-arm64/VCMI-branch-beta-7572801.AppImage",
-    "ios-ios": "https://download.vcmi.eu/branch/beta/ios/VCMI-branch-beta-7572801.ipa"
+    "windows-x64": "https://download.vcmi.eu/branch/beta/windows-x64/VCMI-branch-beta-aca9f7a.exe",
+    "windows-x86": "https://download.vcmi.eu/branch/beta/windows-x86/VCMI-branch-beta-aca9f7a.exe",
+    "windows-arm64": "https://download.vcmi.eu/branch/beta/windows-arm64/VCMI-branch-beta-aca9f7a.exe",
+    "macos-intel": "https://download.vcmi.eu/branch/beta/macos-intel/VCMI-branch-beta-aca9f7a.dmg",
+    "macos-arm": "https://download.vcmi.eu/branch/beta/macos-arm/VCMI-branch-beta-aca9f7a.dmg",
+    "android-armeabi-v7a": "https://download.vcmi.eu/branch/beta/android-armeabi-v7a/VCMI-branch-beta-aca9f7a.apk",
+    "android-arm64-v8a": "https://download.vcmi.eu/branch/beta/android-arm64-v8a/VCMI-branch-beta-aca9f7a.apk",
+    "android-x86_64": "https://download.vcmi.eu/branch/beta/android-x64/VCMI-branch-beta-aca9f7a.apk",
+    "linux-x86_64": "https://download.vcmi.eu/branch/beta/linux-x86_64/VCMI-branch-beta-aca9f7a.AppImage",
+    "linux-arm64": "https://download.vcmi.eu/branch/beta/linux-arm64/VCMI-branch-beta-aca9f7a.AppImage",
+    "ios-ios": "https://download.vcmi.eu/branch/beta/ios/VCMI-branch-beta-aca9f7a.ipa"
   }
 }
