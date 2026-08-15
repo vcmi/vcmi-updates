@@ -14,6 +14,14 @@
       "tintColor": "CD8526",
       "versions": [
         {
+          "version": "1.7.5",
+          "date": "2026-08-15",
+          "size": 28187923,
+          "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.7.5/VCMI-iOS.ipa",
+          "minOSVersion": "12.0",
+          "localizedDescription": "### Stability\n\n* Fix possible crash on starting random map with random number of players\n* Fixed crash on updating a mod in which mod description file has been removed\n* Block special creatures from being selected for special weeks even if they are marked as allowed to prevent crash\n* Fixed crash on failure to load H3 bitmap font, in favor of using true type font provided by VCMI\n* Fixed possible crash on starting a save with eliminated human player\n* Fixed possible crash on Android on displaying message boxes when VCMI is inactive\n* Game will now stop video playback on stream corruption instead of crashing\n* Fixed failure to open .zip archive on systems that use minizip-ng library, such as Fedora\n* Fixed crash on attempt to create zero-sized slider\n* Fixed crash on right-clicking on configurable map object with empty config\n* Fixed several possible crashes on shutdown\n* Fix potential crash due to use-after-free in movement animation\n* Fix possible crash on hero with invalid starting army escaping a battle\n* Fix concurrency race in NKAI's\n* Fixed crash on manual import of mod with unsatisfied deppendency\n* Fix crash on having ADVANCED_NECROMANCY bonus when loading game started in 1.6 release\n* Fix possible crash on object fade-out\n\n### Other\n\n* Do not allow targeting unavailable hexes with area attacks\n* Fix saving of server port number"
+        },
+        {
           "version": "1.7.4",
           "date": "2026-05-20",
           "size": 28163035,
