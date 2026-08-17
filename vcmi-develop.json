@@ -1,19 +1,19 @@
 {
   "version": "1.8.0",
-  "commit": "498d52b",
-  "buildDate": "2026-08-14 21:01:53",
-  "changeLog": "No merged PRs found for `develop`.",
+  "commit": "cff8690",
+  "buildDate": "2026-08-16 10:45:22",
+  "changeLog": "• 2026-08-16 - [#7652](https://github.com/vcmi/vcmi/pull/7652) Adds a search box to exhanced ui for selection tab\n\n• 2026-08-16 - [#7657](https://github.com/vcmi/vcmi/pull/7657) implement replay functionality\n\n• 2026-08-16 - [#7692](https://github.com/vcmi/vcmi/pull/7692) Fix incorrect sailing movement costs in movement execution",
   "download": {
-    "windows-x64": "https://download.vcmi.eu/branch/develop/windows-x64/VCMI-branch-develop-498d52b.exe",
-    "windows-x86": "https://download.vcmi.eu/branch/develop/windows-x86/VCMI-branch-develop-498d52b.exe",
-    "windows-arm64": "https://download.vcmi.eu/branch/develop/windows-arm64/VCMI-branch-develop-498d52b.exe",
-    "macos-intel": "https://download.vcmi.eu/branch/develop/macos-intel/VCMI-branch-develop-498d52b.dmg",
-    "macos-arm": "https://download.vcmi.eu/branch/develop/macos-arm/VCMI-branch-develop-498d52b.dmg",
-    "android-armeabi-v7a": "https://download.vcmi.eu/branch/develop/android-armeabi-v7a/VCMI-branch-develop-498d52b.apk",
-    "android-arm64-v8a": "https://download.vcmi.eu/branch/develop/android-arm64-v8a/VCMI-branch-develop-498d52b.apk",
-    "android-x86_64": "https://download.vcmi.eu/branch/develop/android-x64/VCMI-branch-develop-498d52b.apk",
-    "linux-x86_64": "https://download.vcmi.eu/branch/develop/linux-x86_64/VCMI-branch-develop-498d52b.AppImage",
-    "linux-arm64": "https://download.vcmi.eu/branch/develop/linux-arm64/VCMI-branch-develop-498d52b.AppImage",
-    "ios-ios": "https://download.vcmi.eu/branch/develop/ios/VCMI-branch-develop-498d52b.ipa"
+    "windows-x64": "https://download.vcmi.eu/branch/develop/windows-x64/VCMI-branch-develop-cff8690.exe",
+    "windows-x86": "https://download.vcmi.eu/branch/develop/windows-x86/VCMI-branch-develop-cff8690.exe",
+    "windows-arm64": "https://download.vcmi.eu/branch/develop/windows-arm64/VCMI-branch-develop-cff8690.exe",
+    "macos-intel": "https://download.vcmi.eu/branch/develop/macos-intel/VCMI-branch-develop-cff8690.dmg",
+    "macos-arm": "https://download.vcmi.eu/branch/develop/macos-arm/VCMI-branch-develop-cff8690.dmg",
+    "android-armeabi-v7a": "https://download.vcmi.eu/branch/develop/android-armeabi-v7a/VCMI-branch-develop-cff8690.apk",
+    "android-arm64-v8a": "https://download.vcmi.eu/branch/develop/android-arm64-v8a/VCMI-branch-develop-cff8690.apk",
+    "android-x86_64": "https://download.vcmi.eu/branch/develop/android-x64/VCMI-branch-develop-cff8690.apk",
+    "linux-x86_64": "https://download.vcmi.eu/branch/develop/linux-x86_64/VCMI-branch-develop-cff8690.AppImage",
+    "linux-arm64": "https://download.vcmi.eu/branch/develop/linux-arm64/VCMI-branch-develop-cff8690.AppImage",
+    "ios-ios": "https://download.vcmi.eu/branch/develop/ios/VCMI-branch-develop-cff8690.ipa"
   }
 }
