@@ -1,19 +1,19 @@
 {
   "version": "1.8.0",
-  "commit": "ce96f95",
-  "buildDate": "2026-08-19 09:14:30",
-  "changeLog": "• 2026-08-19 - [#7713](https://github.com/vcmi/vcmi/pull/7713) Keep autosaves in the game's dir, one save per day\n\n• 2026-08-19 - [#7721](https://github.com/vcmi/vcmi/pull/7721) Fix NK2 garrison army upgrades\n\n• 2026-08-18 - [#7724](https://github.com/vcmi/vcmi/pull/7724) Allow parallel execution of Lua code\n\n• 2026-08-18 - [#7720](https://github.com/vcmi/vcmi/pull/7720) fix color chinese translate in replay turn window\n\n• 2026-08-18 - [#7725](https://github.com/vcmi/vcmi/pull/7725) fix isInTactics() check\n\n• 2026-08-17 - [#7690](https://github.com/vcmi/vcmi/pull/7690) Combat scripts\n\n• 2026-08-17 - [#7672](https://github.com/vcmi/vcmi/pull/7672) Implement basic tactics support for BattleAI\n\n• 2026-08-17 - [#7658](https://github.com/vcmi/vcmi/pull/7658) Keep the client running in the background on Android\n\n• 2026-08-17 - [#7694](https://github.com/vcmi/vcmi/pull/7694) fix edge cases for touch click state\n\n• 2026-08-17 - [#7696](https://github.com/vcmi/vcmi/pull/7696) launcher gamepad start\n\n• 2026-08-17 - [#7693](https://github.com/vcmi/vcmi/pull/7693) parallel map parser\n\n• 2026-08-17 - [#7655](https://github.com/vcmi/vcmi/pull/7655) android: add document provider\n\n• 2026-08-17 - [#7716](https://github.com/vcmi/vcmi/pull/7716) Fix neutral battle queries for owned dwellings\n\n• 2026-08-16 - [#7652](https://github.com/vcmi/vcmi/pull/7652) Adds a search box to exhanced ui for selection tab\n\n• 2026-08-16 - [#7657](https://github.com/vcmi/vcmi/pull/7657) implement replay functionality\n\n• 2026-08-16 - [#7692](https://github.com/vcmi/vcmi/pull/7692) Fix incorrect sailing movement costs in movement execution",
+  "commit": "eb693b6",
+  "buildDate": "2026-08-20 19:12:26",
+  "changeLog": "• 2026-08-20 - [#7733](https://github.com/vcmi/vcmi/pull/7733) Revert \"cap army morale penalty at worst possible morale\"\n\n• 2026-08-20 - [#7661](https://github.com/vcmi/vcmi/pull/7661) [HotA] engine support for multiple stuff\n\n• 2026-08-20 - [#7719](https://github.com/vcmi/vcmi/pull/7719) Add scenario event journal\n\n• 2026-08-19 - [#7713](https://github.com/vcmi/vcmi/pull/7713) Keep autosaves in the game's dir, one save per day\n\n• 2026-08-19 - [#7721](https://github.com/vcmi/vcmi/pull/7721) Fix NK2 garrison army upgrades\n\n• 2026-08-18 - [#7724](https://github.com/vcmi/vcmi/pull/7724) Allow parallel execution of Lua code\n\n• 2026-08-18 - [#7720](https://github.com/vcmi/vcmi/pull/7720) fix color chinese translate in replay turn window\n\n• 2026-08-18 - [#7725](https://github.com/vcmi/vcmi/pull/7725) fix isInTactics() check\n\n• 2026-08-17 - [#7690](https://github.com/vcmi/vcmi/pull/7690) Combat scripts\n\n• 2026-08-17 - [#7672](https://github.com/vcmi/vcmi/pull/7672) Implement basic tactics support for BattleAI\n\n• 2026-08-17 - [#7658](https://github.com/vcmi/vcmi/pull/7658) Keep the client running in the background on Android\n\n• 2026-08-17 - [#7694](https://github.com/vcmi/vcmi/pull/7694) fix edge cases for touch click state\n\n• 2026-08-17 - [#7696](https://github.com/vcmi/vcmi/pull/7696) launcher gamepad start\n\n• 2026-08-17 - [#7693](https://github.com/vcmi/vcmi/pull/7693) parallel map parser\n\n• 2026-08-17 - [#7655](https://github.com/vcmi/vcmi/pull/7655) android: add document provider\n\n• 2026-08-17 - [#7716](https://github.com/vcmi/vcmi/pull/7716) Fix neutral battle queries for owned dwellings\n\n• 2026-08-16 - [#7652](https://github.com/vcmi/vcmi/pull/7652) Adds a search box to exhanced ui for selection tab\n\n• 2026-08-16 - [#7657](https://github.com/vcmi/vcmi/pull/7657) implement replay functionality\n\n• 2026-08-16 - [#7692](https://github.com/vcmi/vcmi/pull/7692) Fix incorrect sailing movement costs in movement execution",
   "download": {
-    "windows-x64": "https://download.vcmi.eu/branch/develop/windows-x64/VCMI-branch-develop-ce96f95.exe",
-    "windows-x86": "https://download.vcmi.eu/branch/develop/windows-x86/VCMI-branch-develop-ce96f95.exe",
-    "windows-arm64": "https://download.vcmi.eu/branch/develop/windows-arm64/VCMI-branch-develop-ce96f95.exe",
-    "macos-intel": "https://download.vcmi.eu/branch/develop/macos-intel/VCMI-branch-develop-ce96f95.dmg",
-    "macos-arm": "https://download.vcmi.eu/branch/develop/macos-arm/VCMI-branch-develop-ce96f95.dmg",
-    "android-armeabi-v7a": "https://download.vcmi.eu/branch/develop/android-armeabi-v7a/VCMI-branch-develop-ce96f95.apk",
-    "android-arm64-v8a": "https://download.vcmi.eu/branch/develop/android-arm64-v8a/VCMI-branch-develop-ce96f95.apk",
-    "android-x86_64": "https://download.vcmi.eu/branch/develop/android-x64/VCMI-branch-develop-ce96f95.apk",
-    "linux-x86_64": "https://download.vcmi.eu/branch/develop/linux-x86_64/VCMI-branch-develop-ce96f95.AppImage",
-    "linux-arm64": "https://download.vcmi.eu/branch/develop/linux-arm64/VCMI-branch-develop-ce96f95.AppImage",
-    "ios-ios": "https://download.vcmi.eu/branch/develop/ios/VCMI-branch-develop-ce96f95.ipa"
+    "windows-x64": "https://download.vcmi.eu/branch/develop/windows-x64/VCMI-branch-develop-eb693b6.exe",
+    "windows-x86": "https://download.vcmi.eu/branch/develop/windows-x86/VCMI-branch-develop-eb693b6.exe",
+    "windows-arm64": "https://download.vcmi.eu/branch/develop/windows-arm64/VCMI-branch-develop-eb693b6.exe",
+    "macos-intel": "https://download.vcmi.eu/branch/develop/macos-intel/VCMI-branch-develop-eb693b6.dmg",
+    "macos-arm": "https://download.vcmi.eu/branch/develop/macos-arm/VCMI-branch-develop-eb693b6.dmg",
+    "android-armeabi-v7a": "https://download.vcmi.eu/branch/develop/android-armeabi-v7a/VCMI-branch-develop-eb693b6.apk",
+    "android-arm64-v8a": "https://download.vcmi.eu/branch/develop/android-arm64-v8a/VCMI-branch-develop-eb693b6.apk",
+    "android-x86_64": "https://download.vcmi.eu/branch/develop/android-x64/VCMI-branch-develop-eb693b6.apk",
+    "linux-x86_64": "https://download.vcmi.eu/branch/develop/linux-x86_64/VCMI-branch-develop-eb693b6.AppImage",
+    "linux-arm64": "https://download.vcmi.eu/branch/develop/linux-arm64/VCMI-branch-develop-eb693b6.AppImage",
+    "ios-ios": "https://download.vcmi.eu/branch/develop/ios/VCMI-branch-develop-eb693b6.ipa"
   }
 }
