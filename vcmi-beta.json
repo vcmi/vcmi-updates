@@ -1,19 +1,19 @@
 {
-  "version": "1.7.5",
-  "commit": "aca9f7a",
-  "buildDate": "2026-08-13 12:47:29",
+  "version": "",
+  "commit": "",
+  "buildDate": "",
   "changeLog": "No merged PRs found for `beta`.",
   "download": {
-    "windows-x64": "https://download.vcmi.eu/branch/beta/windows-x64/VCMI-branch-beta-aca9f7a.exe",
-    "windows-x86": "https://download.vcmi.eu/branch/beta/windows-x86/VCMI-branch-beta-aca9f7a.exe",
-    "windows-arm64": "https://download.vcmi.eu/branch/beta/windows-arm64/VCMI-branch-beta-aca9f7a.exe",
-    "macos-intel": "https://download.vcmi.eu/branch/beta/macos-intel/VCMI-branch-beta-aca9f7a.dmg",
-    "macos-arm": "https://download.vcmi.eu/branch/beta/macos-arm/VCMI-branch-beta-aca9f7a.dmg",
-    "android-armeabi-v7a": "https://download.vcmi.eu/branch/beta/android-armeabi-v7a/VCMI-branch-beta-aca9f7a.apk",
-    "android-arm64-v8a": "https://download.vcmi.eu/branch/beta/android-arm64-v8a/VCMI-branch-beta-aca9f7a.apk",
-    "android-x86_64": "https://download.vcmi.eu/branch/beta/android-x64/VCMI-branch-beta-aca9f7a.apk",
-    "linux-x86_64": "https://download.vcmi.eu/branch/beta/linux-x86_64/VCMI-branch-beta-aca9f7a.AppImage",
-    "linux-arm64": "https://download.vcmi.eu/branch/beta/linux-arm64/VCMI-branch-beta-aca9f7a.AppImage",
-    "ios-ios": "https://download.vcmi.eu/branch/beta/ios/VCMI-branch-beta-aca9f7a.ipa"
+    "windows-x64": "",
+    "windows-x86": "",
+    "windows-arm64": "",
+    "macos-intel": "",
+    "macos-arm": "",
+    "android-armeabi-v7a": "",
+    "android-arm64-v8a": "",
+    "android-x86_64": "",
+    "linux-x86_64": "",
+    "linux-arm64": "",
+    "ios-ios": ""
   }
 }
